@@ -24,7 +24,8 @@ article, aside, figure, footer, header, hgroup, nav, section {
 
 p
 { padding: 0 0 10px 0;
-  line-height: 1.7em;}
+  line-height: 1.7em;
+  text-align: justify}
 
 img
 { border: 0;}
