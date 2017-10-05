@@ -17,6 +17,7 @@ if (!$row = $rezultat -> fetch_assoc()) {
   # nume utilizator si parola corecte
   //echo "Autentificare reusita.";
   $_SESSION['id'] = $row['id'];
+  $_SESSION['username'] = $row['nume'] . " " . $row['prenume'];
   header("Location: ../index.php");
   }
 ?>

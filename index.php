@@ -24,61 +24,52 @@
             <li class='current'><a href='index.php'>Acasă</a></li>
             <li><a href='ourwork.html'>Raport intervenție</a></li>
             <li><a href='testimonials.html'>Raport SMURD</a></li>
-            <li><a href='projects.html'>Projects</a></li>
-            <li><a href='contact.html'>Contact Us</a></li>
+            <li><a href='testimonials.html'>Raport descarcerare</a></li>
             <li><a href='php/deconectare.php'>Ieșire</a></li>
+            <li class='session'><?php echo "logat ca " . $_SESSION['username'];?></li>
           </ul>
         </div><!--close menubar-->
+        
       </nav>
 
   	<div id='site_content'>
-
-  	  <div id='content'>
-          <div class='content_item'>
-  		  <h1>Welcome To Your Website</h1>
-            <p>This standards compliant, simple, fixed width website template is
-            released as an 'open source' design (under the Creative Commons Attribution
-            3.0 Licence), which means that you are free to download and use it for anything
-            you want (including modifying and amending it). If you wish to remove the
-            &ldquo;website template by Free HTML5 Templates&rdquo;, all I ask is for a
-            donation of &pound;20.00 GBP. Please feel free to contact me with any questions
-            you may have about my free HTML5 website templates or bespoke work.</p>
-
-  		  <div class='content_imagetext'>
-  		    <div class='content_image'>
-  		      <img src='images/image1.jpg' alt='image1'/>
-  	        </div>
-  		    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi elit sapien, tempus sit amet hendrerit volutpat, euismod vitae risus. Etiam consequat, sem et 			vulputate dapibus, diam enim tristique est, vitae porta eros mauris ut orci. Praesent sed velit odio. Ut massa arcu, suscipit viverra molestie at, aliquet a metus. 			Nullam sit amet tellus dui, ut tincidunt justo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec iaculis egestas laoreet. Nunc non ipsum metus, non 			laoreet urna. Vestibulum quis risus quis diam mattis tempus. Vestibulum suscipit pretium tempor. </p>
-  		  </div><!--close content_imagetext-->
-
-  		  <div class='content_container'>
-  		    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque cursus tempor enim. Aliquam facilisis neque non nunc posuere eget volutpat metus 					tincidunt.</p>
-  		  	<div class='button_small'>
-  		      <a href='#'>Read more</a>
-  		    </div><!--close button_small-->
-  		  </div><!--close content_container-->
-            <div class='content_container'>
-  		    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque cursus tempor enim. Aliquam facilisis neque non nunc posuere eget volutpat metus 					tincidunt.</p>
-  		  	<div class='button_small'>
-  		      <a href='#'>Read more</a>
-  		    </div><!--close button_small-->
-  		  </div><!--close content_container-->
-            <div class='content_container'>
-  		    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque cursus tempor enim. Aliquam facilisis neque non nunc posuere eget volutpat metus 					tincidunt.</p>
-  		  	<div class='button_small'>
-  		      <a href='i#'>Read more</a>
-  		    </div><!--close button_small-->
-  		  </div><!--close content_container-->
-
-  		</div><!--close content_item-->
-        </div><!--close content-->
-  	</div><!--close site_content-->
-    </div><!--close main-->
-
-      <footer>
-  	  <a href='index.php'>Home</a> | <a href='ourwork.html'>Our Work</a> | <a href='testimonials.html'>Testimonials</a> | <a href='projects.html'>Projects</a> | <a href='contact.html'>Contact</a><br/><br/>
-      </footer>
-
+  		<div class="iconGrid">
+	  		<div class="iconContainer">
+		  		<a><img class="iconClass" src="icons/organizare.png" alt="Registru organizare"><span class="caption">Registru organizare</span></a>
+		  	</div>
+	  		<div class="iconContainer">
+		  		<a><img class="iconClass" src="icons/prezenta.png" alt="Prezenta"><span class="caption">Prezența</span></a>
+		  	</div>
+		  	<div class="iconContainer">
+		  		<a><img class="iconClass" src="icons/calendar.png" alt="Calendarul zilei"><span class="caption">Calendarul  zilei</span></a>
+		  	</div>
+		  	<div class="iconContainer">
+		  		<a><img class="iconClass" src="icons/angajat.png" alt="Angajati"><span class="caption">Angajați</span></a>
+		  	</div>
+  		</div>
+  		
+  		<div class="iconGrid">
+	  		<div class="iconContainer">
+		  		<a><img class="iconClass" src="icons/autospeciala_incendiu.png" alt="Raport interventie"><span class="caption">Raport intervenție</span></a>
+		  	</div>
+	  		<div class="iconContainer">
+		  		<a><img class="iconClass" src="icons/ambulanta.png" alt="Raport SMURD"><span class="caption">Raport SMURD</span></a>
+		  	</div>
+		  	<div class="iconContainer">
+		  		<a><img class="iconClass" src="icons/raport_desca.png" alt="Raport descarcerare"><span class="caption">Raport descarcerare</span></a>
+		  	</div>
+		  	<div class="iconContainer">
+		  		<a><img class="iconClass" src="icons/cautare.png" alt="Cauta raport"><span class="caption">Caută raport</span></a>
+		  	</div>
+  		</div>
+  	
+    <footer>
+  		<a href='index.php'>Acasă</a> 
+  		| <a href='contact.html'>Contact</a><br/><br/>
+    </footer>
+    </div>
+  	</div>
+  	
     <!-- javascript at the bottom for fast page loading -->
     <script type='text/javascript' src='js/jquery.js'></script>
     <script type='text/javascript' src='js/image_slide.js'></script>

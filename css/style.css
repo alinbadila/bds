@@ -15,7 +15,11 @@ body
 { font: normal 80% Arial, Helvetica, sans-serif;
   color: #FFF;
   text-shadow: 1px 1px #000;
-  background: transparent url(../images/background.jpg) repeat;}
+  background: #466368;
+  background: -webkit-linear-gradient(#648880, #293f50);
+  background:    -moz-linear-gradient(#648880, #293f50);
+  background:         linear-gradient(#648880, #293f50);
+}
 
 /* tell the browser to render HTML 5 elements as block */
 article, aside, figure, footer, header, hgroup, nav, section {
@@ -155,6 +159,15 @@ ul#nav li a
   text-align: center;
   color: #FFF;
   text-decoration: none;}
+  
+ul#nav li.session {
+	float: right;
+	font: Arial, Helvetica, sans-serif;
+	height: 24px;
+	margin: 10px 0 0 20px;
+	text-shadow: 0px -1px 0px #000;
+	padding: 6px 20px 0 20px;	
+}  
 
 ul#nav li.current a, ul#nav li:hover a
 { color: #000;
@@ -168,7 +181,6 @@ ul#nav li.current a, ul#nav li:hover a
 { width: 80%;
   overflow: hidden;
   margin-bottom: 30px;
-  background: transparent url(../images/transparent.png) repeat;
   border-radius: 0px 0px 7px 7px;
   -moz-border-radius: 0px 0px 7px 7px;
   -webkit-border: 0px 0px 7px 7px;
@@ -209,13 +221,12 @@ ul#nav li.current a, ul#nav li:hover a
 
 footer
 { width: 940px;
-  height: 50px;
+  height: 20px;
   padding-top: 15px;
   padding-bottom: 15px;
   margin-bottom: 30px;
   font-weight: bold;
   text-align: center;
-  background: transparent url(../images/transparent.png) repeat;
   border-radius: 7px 7px 7px 7px;
   -moz-border-radius: 7px 7px 7px 7px;
   -webkit-border: 7px 7px 7px 7px;
@@ -349,3 +360,48 @@ ul img {
   font: normal 130% arial, sans-serif;
   color: #FFF;
   text-shadow: 1px 1px #000;}
+  
+.iconClass {
+	width: 128px !important;
+    height: 128px !important;
+}
+
+div.iconContainer {
+	display: inline-block;
+	text-align: center;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.caption{
+	display: block;
+	font: normal Arial, Helvetica, sans-serif;
+	color: #FFF;
+	text-shadow: 1px 1px #000;
+}
+
+div.iconGrid {
+	width: 940px;
+	height: 160px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-bottom: 30px;
+	text-align: center;
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 7px 7px 7px 7px;
+	-moz-border-radius: 7px 7px 7px 7px;
+	-webkit-border: 7px 7px 7px 7px;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px;
+	-moz-box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px;
+	box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px;
+}
+
+img.iconClass {
+	align-content: center;
+}
+img.iconClass:hover {
+	opacity: 0.8;
+	filter: alpha(opacity=100);
+}
