@@ -14,7 +14,7 @@ html
 body
 { font: normal 80% Arial, Helvetica, sans-serif;
   color: #FFF;
-  text-shadow: 1px 1px #000;
+/*  text-shadow: 1px 1px #000;*/
   background: #466368;
   background: -webkit-linear-gradient(#648880, #293f50);
   background:    -moz-linear-gradient(#648880, #293f50);
@@ -38,13 +38,19 @@ h1, h2, h3, h4, h5, h6
 { font: normal 250% 'News Cycle', Arial, sans-serif;
   color: #FFF;
   letter-spacing: -1px;
-  margin: 0 0 10px 0;}
+  margin: 0 0 10px 0;
+}
 
 h2
-{ font-size: 165%;}
+{ font-size: 165%;
+padding: 10px;
+text-align: center;
+}
 
 h3
-{ font-size: 130%;}
+{ font-size: 130%;
+font-weight: bolder;
+}
 
 h4, h5, h6
 { margin: 0;

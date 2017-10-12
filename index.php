@@ -73,7 +73,6 @@
   	
     <!-- javascript at the bottom for fast page loading -->
     <script type='text/javascript' src='js/jquery.js'></script>
-    <script type='text/javascript' src='js/image_slide.js'></script>
 
   </body>
   </html>

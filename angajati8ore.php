@@ -11,8 +11,14 @@
     <meta name='keywords' content='website keywords, website keywords' />
     <meta http-equiv='content-type' content='text/html; charset=utf-8' />
     <link rel='stylesheet' type='text/css' href='css/style.css' />
-    <!-- modernizr enables HTML5 elements and feature detects -->
-    <script type='text/javascript' src='js/modernizr-1.5.min.js'></script>
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css" />
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.js"></script>
+    <script>
+		$( function() {
+			$( "#accordion" ).accordion();
+  		} );
+  	</script>
   </head>
 
   <body>
@@ -31,20 +37,34 @@
       </nav>
 
   	<div id='site_content'>
-  		<div class="iconGrid">
-	  		<div class="iconContainer">
-		  		<a><img class="iconClass" src="icons/8ore.png" alt="Program de 8 ore"><span class="caption">Program de 8 ore</span></a>
-		  	</div>
-	  		<div class="iconContainer">
-		  		<a><img class="iconClass" src="icons/1.png" alt="Tura 1"><span class="caption">Tura 1</span></a>
-		  	</div>
-	  		<div class="iconContainer">
-		  		<a><img class="iconClass" src="icons/2.png" alt="Tura 2"><span class="caption">Tura 2</span></a>
-		  	</div>
-		  	<div class="iconContainer">
-		  		<a><img class="iconClass" src="icons/3.png" alt="Tura 3"><span class="caption">Tura 3</span></a>
-		  	</div>	
-  		</div>
+	  	<h2>Personal angajat la program zilnic de 8 ore</h2>
+	  	<?php 
+		  	$conn = mysqli_connect("localhost", "root", "Alin1984", "BDS");
+		  	if (! $conn ) {
+		  		# conectare nereusita
+		  		die("Conectare nereușită:".mysqli_connect_error());
+			}
+		  	$sql = "SELECT BDS.grade.GRAD, BDS.date_pers.NUME, BDS.date_pers.PRENUME, BDS.functii.FUNCTIE_DETALIATA 
+		  			FROM BDS.grade
+		  				INNER JOIN BDS.functii ON BDS.grade.ID_CADRU = BDS.functii.ID_CADRU
+		  				INNER JOIN BDS.date_pers ON BDS.functii.ID_CADRU = BDS.date_pers.ID_CADRU
+		  			WHERE BDS.functii.TURA = 0 and BDS.functii.ID_CADRU IS NOT NULL;";
+		  	$rezultat = $conn -> query($sql);
+		  	if (mysqli_num_rows($rezultat) > 0) {
+		  		// output data of each row
+		  		$nrcrt = 0;
+		  		echo "<div id=\"accordion\">";
+		  		while($row = mysqli_fetch_assoc($rezultat)) {
+			  		$nrcrt++;
+		  			echo "<h3>" . $nrcrt . ". " . $row["GRAD"]. " " . $row["NUME"] . " " . $row["PRENUME"]. " - " . $row["FUNCTIE_DETALIATA"] . "</h3>";
+		  			echo "<div>" . "<p> Test accordion </p> <p>Test 2</p>" . "</div>";	
+    			}
+    			echo "</div>";
+			} else {
+				echo "0 rezultate";
+				}
+			mysqli_close($conn);  	
+	  	?>
   	
     <footer>
   		<a href='index.php'>Acasă</a> 
@@ -54,8 +74,7 @@
   	</div>
   	
     <!-- javascript at the bottom for fast page loading -->
-    <script type='text/javascript' src='js/jquery.js'></script>
-    <script type='text/javascript' src='js/image_slide.js'></script>
+   
 
   </body>
   </html>
