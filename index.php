@@ -25,8 +25,9 @@
             <li><a href='ourwork.html'>Raport intervenție</a></li>
             <li><a href='testimonials.html'>Raport SMURD</a></li>
             <li><a href='testimonials.html'>Raport descarcerare</a></li>
-            <li><a href='php/deconectare.php'>Ieșire</a></li>
+           
             <li class='session'><?php echo "logat ca " . $_SESSION['username'];?></li>
+             <li><a href='php/deconectare.php'>Ieșire</a></li>
           </ul>
         </div><!--close menubar-->
         
@@ -44,7 +45,7 @@
 		  		<a><img class="iconClass" src="icons/calendar.png" alt="Calendarul zilei"><span class="caption">Calendarul  zilei</span></a>
 		  	</div>
 		  	<div class="iconContainer">
-		  		<a><img class="iconClass" src="icons/angajat.png" alt="Angajati"><span class="caption">Angajați</span></a>
+		  		<a href="angajati.php"><img class="iconClass" src="icons/angajat.png" alt="Angajati"><span class="caption">Angajați</span></a>
 		  	</div>
   		</div>
   		
