@@ -38,6 +38,7 @@
 
   	<div id='site_content'>
 	  	<h2>Personal angajat la program zilnic de 8 ore</h2>
+	  	<div class="iconGrid">
 	  	<?php 
 		  	$conn = mysqli_connect("localhost", "root", "Alin1984", "BDS");
 		  	if (! $conn ) {
@@ -65,7 +66,7 @@
 				}
 			mysqli_close($conn);  	
 	  	?>
-  	
+	  	</div>
     <footer>
   		<a href='index.php'>Acasă</a> 
   		| <a href='contact.html'>Contact</a><br/><br/>
