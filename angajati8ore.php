@@ -49,7 +49,7 @@
 		  			FROM BDS.grade
 		  				INNER JOIN BDS.functii ON BDS.grade.ID_CADRU = BDS.functii.ID_CADRU
 		  				INNER JOIN BDS.date_pers ON BDS.functii.ID_CADRU = BDS.date_pers.ID_CADRU
-		  			WHERE BDS.functii.TURA = 0 and BDS.functii.ID_CADRU IS NOT NULL;";
+		  			WHERE (BDS.functii.TURA = 0) and (BDS.functii.ID_CADRU IS NOT NULL);";
 		  	$rezultat = $conn -> query($sql);
 		  	if (mysqli_num_rows($rezultat) > 0) {
 		  		// output data of each row
