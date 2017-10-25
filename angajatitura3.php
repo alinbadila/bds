@@ -39,7 +39,7 @@
         </nav>
 
         <div id='site_content'>
-            <h2>Tura 1</h2>
+            <h2>Tura 3</h2>
 
             <div class="iconGrid">
                 <?php 
@@ -74,7 +74,7 @@
             <footer><a href='index.php'>Acasă</a> | <a href='contact.html'>Contact</a><br>
             <br></footer>
         </div>
-    </div><!-- javascript at the bottom for fast page loading -->
+    </div>
     <?php else: 
       header("Location: loginpage.php");
       endif; ?>

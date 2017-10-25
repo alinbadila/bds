@@ -74,7 +74,7 @@ $( function() {
             <footer><a href='index.php'>Acasă</a> | <a href='contact.html'>Contact</a><br>
             <br></footer>
         </div>
-    </div><!-- javascript at the bottom for fast page loading -->
+    </div>
     <?php else:
         header("Location: loginpage.php");
     endif; ?>
