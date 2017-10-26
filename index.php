@@ -46,7 +46,7 @@
                 </div>
 
                 <div class="iconContainer">
-                    <a><img class="iconClass" src="icons/calendar.png" alt="Calendarul zilei"><span class="caption">Calendarul zilei</span></a>
+                    <a href="calendar.php"><img class="iconClass" src="icons/calendar.png" alt="Calendarul zilei"><span class="caption">Calendarul zilei</span></a>
                 </div>
 
                 <div class="iconContainer">
