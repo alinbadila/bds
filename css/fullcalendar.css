@@ -950,6 +950,7 @@ NOTE: use percentage font sizes or else old IE chokes
 
 .fc-toolbar h2 {
 	margin: 0;
+	color: black;
 }
 
 /* button layering (for border precedence) */

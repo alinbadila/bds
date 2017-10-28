@@ -14,6 +14,7 @@
     <script src='js/jquery.js'></script>
 	<script src='js/moment.min.js'></script>
 	<script src='js/fullcalendar.js'></script>
+	<script src="js/ro.js"></script>
 	<script>
 	$(document).ready(function() {
 
@@ -24,8 +25,9 @@
         header: {
 				left: 'prev,next today',
 				center: 'title',
-				right: 'month,basicWeek,basicDay'
+				right: 'month,agendaWeek,agendaDay,listMonth'
 			},
+		lang: 'ro',
 		navLinks: true, // can click day/week names to navigate views
 		editable: true,
 		eventLimit: true // allow "more" link when too many events
@@ -51,7 +53,7 @@
         <div id='site_content'>
             <h2>Calendarul subunității</h2>
 
-            <div class="iconGrid">
+            <div class="calendar">
 	        	<div id='calendar'></div>
             </div>
 
