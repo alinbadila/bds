@@ -9,12 +9,10 @@
     <meta name='description' content='Angajatii subunitatii'>
     <meta name='keywords' content='website keywords, website keywords'>
     <meta http-equiv='content-type' content='text/html; charset=utf-8'>
-    <link rel='stylesheet' type='text/css' href='css/style.css'>
-    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
-    <script type="text/javascript" src="js/jquery.js">
-</script>
-    <script type="text/javascript" src="js/jquery-ui.js">
-</script>
+    <link rel='stylesheet' type='text/css' href='../css/style.css'>
+    <link rel="stylesheet" type="text/css" href="../css/jquery-ui.css">
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/jquery-ui.js"></script>
     <script type="text/javascript">
     $( function() {
             $( "#accordion" ).accordion();
@@ -27,11 +25,11 @@
         <nav>
             <div id='menubar'>
                 <ul id='nav'>
-                    <li class='current'><a href='index.php'>Acasă</a></li>
+                    <li class='current'><a href='../index.php'>Acasă</a></li>
 
                     <li class='current'><a href='angajati.php'>&lt; Angajați</a></li>
 
-                    <li><a href='php/deconectare.php'>Ieșire</a></li>
+                    <li><a href='deconectare.php'>Ieșire</a></li>
 
                     <li class='session'><?php echo "logat ca " . $_SESSION['username'];?></li>
                 </ul>
@@ -76,7 +74,7 @@
                         ?>
             </div>
 
-            <footer><a href='index.php'>Acasă</a> | <a href='contact.html'>Contact</a><br>
+            <footer><a href='../index.php'>Acasă</a> | <a>Contact</a><br>
             <br></footer>
         </div>
     </div>

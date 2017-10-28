@@ -22,15 +22,15 @@
                 <ul id='nav'>
                     <li class='current'><a href='index.php'>Acasă</a></li>
 
-                    <li><a href='ourwork.html'>Raport intervenție</a></li>
+                    <li><a>Raport intervenție</a></li>
 
-                    <li><a href='testimonials.html'>Raport SMURD</a></li>
+                    <li><a>Raport SMURD</a></li>
 
-                    <li><a href='testimonials.html'>Raport descarcerare</a></li>
+                    <li><a>Raport descarcerare</a></li>
 
                     <li class='session'><?php echo "logat ca " . $_SESSION['username'];?></li>
 
-                    <li><a href='php/deconectare.php'>Ieșire</a></li>
+                    <li><a href="php/deconectare.php"/>Ieșire</a></li>
                 </ul>
             </div><!--close menubar-->
         </nav>
@@ -46,11 +46,11 @@
                 </div>
 
                 <div class="iconContainer">
-                    <a href="calendar.php"><img class="iconClass" src="icons/calendar.png" alt="Calendarul zilei"><span class="caption">Calendarul zilei</span></a>
+                    <a href="php/calendar.php"><img class="iconClass" src="icons/calendar.png" alt="Calendarul zilei"><span class="caption">Calendarul zilei</span></a>
                 </div>
 
                 <div class="iconContainer">
-                    <a href="angajati.php"><img class="iconClass" src="icons/angajat.png" alt="Angajati"><span class="caption">Angajați</span></a>
+                    <a href="php/angajati.php"><img class="iconClass" src="icons/angajat.png" alt="Angajati"><span class="caption">Angajați</span></a>
                 </div>
             </div>
 
@@ -72,13 +72,13 @@
                 </div>
             </div>
 
-            <footer><a href='index.php'>Acasă</a> | <a href='contact.html'>Contact</a><br>
+            <footer><a href='index.php'>Acasă</a> | <a>Contact</a><br>
             <br></footer>
         </div>
     </div><!-- javascript at the bottom for fast page loading -->
     <script type='text/javascript' src='js/jquery.js'>
 </script><?php else: 
-      header("Location: loginpage.php");
+      header("Location: php/loginpage.php");
       endif; ?>
 </body>
 </html>

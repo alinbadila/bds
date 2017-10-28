@@ -8,7 +8,7 @@ session_start();
     <meta charset="utf-8">
 
     <title>Baza de Date a Subunității</title>
-    <link rel="stylesheet" type="text/css" href="css/loginstyle.css">
+    <link rel="stylesheet" type="text/css" href="../css/loginstyle.css">
 </head>
 
 <body>
@@ -17,7 +17,7 @@ session_start();
 
         <h3>Baza de date a subunității</h3>
 
-        <form action="php/autentificare.php" method="post">
+        <form action="autentificare.php" method="post">
             <input type="text" name="uid" placeholder="nume utilizator"><br>
             <input type="password" name="parola" placeholder="parola"><br>
             <button class="button" type="submit" name="butonLogin">Conectare</button>

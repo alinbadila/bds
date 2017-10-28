@@ -7,6 +7,6 @@ if (!mysqli_close($conn)) {
   echo "Baza de date nu a fost inchisa".mysql_error();
 } else {
   # code...
-  header("Location: ../loginpage.php");
+  header("Location: loginpage.php");
 }
 ?>

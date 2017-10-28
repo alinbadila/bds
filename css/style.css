@@ -420,7 +420,7 @@ div.calendar {
 	-webkit-box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px;
 	-moz-box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px;
 	box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px;
-	background-color:#f5f6e1;
+	background-color: white;
 }
 
 img.iconClass {

@@ -9,12 +9,12 @@
     <meta name='description' content='Calendar'>
     <meta name='keywords' content='website keywords, website keywords'>
     <meta http-equiv='content-type' content='text/html; charset=utf-8'>
-    <link rel='stylesheet' type='text/css' href='css/style.css'>
-    <link rel='stylesheet' type='text/css' href='css/fullcalendar.css'>
-    <script src='js/jquery.js'></script>
-	<script src='js/moment.min.js'></script>
-	<script src='js/fullcalendar.js'></script>
-	<script src="js/ro.js"></script>
+    <link rel='stylesheet' type='text/css' href='../css/style.css'>
+    <link rel='stylesheet' type='text/css' href='../css/fullcalendar.css'>
+    <script src='../js/jquery.js'></script>
+	<script src='../js/moment.min.js'></script>
+	<script src='../js/fullcalendar.js'></script>
+	<script src="../js/ro.js"></script>
 	<script>
 	$(document).ready(function() {
 
@@ -41,9 +41,9 @@
         <nav>
             <div id='menubar'>
                 <ul id='nav'>
-                    <li class='current'><a href='index.php'>Acasă</a></li>
+                    <li class='current'><a href='../index.php'>Acasă</a></li>
 
-                    <li><a href='php/deconectare.php'>Ieșire</a></li>
+                    <li><a href='deconectare.php'>Ieșire</a></li>
 
                     <li class='session'><?php echo "logat ca " . $_SESSION['username'];?></li>
                 </ul>
@@ -52,12 +52,11 @@
 
         <div id='site_content'>
             <h2>Calendarul subunității</h2>
-
             <div class="calendar">
 	        	<div id='calendar'></div>
             </div>
 
-            <footer><a href='index.php'>Acasă</a> | <a href='contact.html'>Contact</a><br>
+            <footer><a href='../index.php'>Acasă</a> | <a>Contact</a><br>
             <br></footer>
         </div>
     </div>
