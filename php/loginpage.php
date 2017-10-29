@@ -10,6 +10,7 @@ session_start();
     <title>Baza de Date a Subunității</title>
     <link rel="stylesheet" type="text/css" href="../css/loginstyle.css">
     <link rel="shortcut icon" href="../favicon.png" />
+    <link rel="apple-touch-icon" href="../faviconsafari.png" />
 </head>
 
 <body>
