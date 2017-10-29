@@ -41,12 +41,7 @@ $( function() {
 
             <div class="iconGrid">
                 <?php
-	            $servername = "86.125.149.136";
-				$username = "root";
-				$password = "Alin1984";
-				$database = "BDS";
-				$port = 3306;
-				$conn = mysqli_connect($servername, $username, $password, $database, $port);
+				$conn = mysqli_connect($_SESSION['dbservername'], $_SESSION['dbusername'], $_SESSION['dbpassword'], $_SESSION['database'], $_SESSION['dbport']);
                 if (! $conn ) {
                     # conectare nereusita
                     die("Conectare nereușită:".mysqli_connect_error());
