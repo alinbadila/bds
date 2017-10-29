@@ -10,7 +10,7 @@
     <meta name='keywords' content='website keywords, website keywords'>
     <meta http-equiv='content-type' content='text/html; charset=utf-8'>
     <link rel='stylesheet' type='text/css' href='css/style.css'><!-- modernizr enables HTML5 elements and feature detects -->
-    <link rel="shortcut icon" href="icons/favicon.png" />
+    <link rel="shortcut icon" href="favicon.png" />
 
 </head>
 
