@@ -5,11 +5,17 @@
 
 <html lang="ro">
 <head>
-    <title>B.D.S. - pagina principală</title>
-    <meta name='description' content='website description'>
-    <meta name='keywords' content='website keywords, website keywords'>
+	<meta charset="utf-8"
+    <meta name='description' content='Managementul unei subunitati de pompieri'>
+    <meta name='keywords' content='pompieri, interventie, calendar, organizare'>
     <meta http-equiv='content-type' content='text/html; charset=utf-8'>
-    <link rel='stylesheet' type='text/css' href='css/style.css'><!-- modernizr enables HTML5 elements and feature detects -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Alin Bădilă, badila.alin@yahoo.com">
+    
+    <title>B.D.S. - pagina principală</title>
+    
+    <link rel='stylesheet' type='text/css' href='css/style.css'>
     <link rel="shortcut icon" href="favicon.png" />
     <link rel="apple-touch-icon" href="faviconsafari.png" />
 
