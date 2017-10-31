@@ -14,8 +14,6 @@ if (isset($_POST['title']) && isset($_POST['start']) && isset($_POST['end']) && 
 	//$req = $bdd->prepare($sql);
 	//$req->execute();
 	
-	echo $sql;
-	
 	$query = $conn->prepare( $sql );
 	if ($query == false) {
 	 print_r($conn->errorInfo());
@@ -28,7 +26,5 @@ if (isset($_POST['title']) && isset($_POST['start']) && isset($_POST['end']) && 
 	}
 
 }
-header('Location: '.$_SERVER['HTTP_REFERER']);
-
-	
+header('Location: '.$_SERVER['HTTP_REFERER']);	
 ?>

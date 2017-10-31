@@ -22,35 +22,49 @@
     
     <title>B.D.S. - Calendar</title>
     
-    <link rel='stylesheet' type='text/css' href='../css/style.css'>
+	<link rel='stylesheet' type='text/css' href='../css/style.css'>
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
     <link rel='stylesheet' type='text/css' href='../css/fullcalendar.css'>
+        <!-- Custom CSS -->
+    <style>
+    body {
+        padding-top: 70px;
+        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    }
+
+	.col-centered{
+		float: none;
+		margin: 0 auto;
+	}
+    </style>
 </head>
 
 <body>
-
-<div id='main'>
-        <nav>
-            <div id='menubar'>
-                <ul id='nav'>
-                    <li class='current'><a href='../index.php'>Acasă</a></li>
-
-                    <li><a href='deconectare.php'>Ieșire</a></li>
-
-                    <li class='session'><?php echo "logat ca " . $_SESSION['username'];?></li>
-                </ul>
-            </div>
-        </nav>
-
-
-
+<div id='site_content'>
+	<nav>
+        <div id='menubar'>
+            <ul id='nav'>
+                <li class='current'><a href='../index.php'>Acasă</a></li>
+                <li class='session'><?php echo "logat ca " . $_SESSION['username'];?></li>
+                <li><a href="php/deconectare.php"/>Ieșire</a></li>
+            </ul>
+        </div><!--close menubar-->
+    </nav>
     <!-- Page Content -->
-    <div id="site_content">
-		<h2>Calendarul subunității</h2>
-            <div class="calendar">
-	        	<div id='calendar'></div>
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h1>Calendarul subunității</h1>
+                <div class="calendar">
+                	<div id="calendar" class="col-centered">
+                	</div>
+                </div>	
             </div>
-            
+			
+        </div>
+        <!-- /.row -->
+		
 		<!-- Modal -->
 		<div class="modal fade" id="ModalAdd" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 		  <div class="modal-dialog" role="document">
@@ -164,20 +178,16 @@
 		  </div>
 		</div>
 
-    
-    <!-- /.container -->
-    
-	
+    </div>
+    <!-- /.container -->	
 	
 	<footer><a href='../index.php'>Acasă</a> | <a>Contact</a><br><br></footer>
-	</div>
-</div>   <!-- main -->
-      
-      
-      
+</div>
       
 <script src='../js/jquery.js'></script>
+<script src="../js/popper.js"></script>
 <script src="../js/bootstrap.js"></script>
+
 <script src='../js/moment.min.js'></script>
 <script src='../js/fullcalendar.js'></script>
 <script src="../js/ro.js"></script>
@@ -293,41 +303,7 @@
         </div>
 -->
 
-    <!-- Page Content
-    <div id="site_content">
-		<h2>Calendarul subunității</h2>
-        <div class="calendar">
-            <div class="col-lg-12 text-center">
-                <div id="calendar" class="col-centered">
-                </div>
-            </div>
-			
-        </div>
-        <!-- /.row -->
-
-
-<!--
-<script>
-	$(document).ready(function() {
-
-    // page is now ready, initialize the calendar...
-
-    	$('#calendar').fullCalendar({
-        // put your options and callbacks here
-        header: {
-				left: 'prev,next today',
-				center: 'title',
-				right: 'month,agendaWeek,agendaDay,listMonth'
-			},
-		lang: 'ro',
-		navLinks: true, // can click day/week names to navigate views
-		editable: true,
-		eventLimit: true // allow "more" link when too many events
-    	})
-	});
-</script>
--->
- <?php else: 
+<?php else: 
       header("Location: loginpage.php");
       endif; ?>
 </body>
