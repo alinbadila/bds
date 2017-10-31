@@ -1,5 +1,12 @@
 <?php
   session_start();
+
+  require_once('dbhandler.php');
+  $sql = "SELECT id, TITLU, CULOARE, START, END FROM evenimente ";
+  $req = $conn->prepare($sql);
+  $req->execute();
+  $events = $req->fetchAll();
+  
   if ($_SESSION['id']): ?>
 <!DOCTYPE html>
 
@@ -21,7 +28,8 @@
 </head>
 
 <body>
-    <div id='main'>
+
+<div id='main'>
         <nav>
             <div id='menubar'>
                 <ul id='nav'>
@@ -31,33 +39,18 @@
 
                     <li class='session'><?php echo "logat ca " . $_SESSION['username'];?></li>
                 </ul>
-            </div><!--close menubar-->
+            </div>
         </nav>
 
-<!--
-        <div id='site_content'>
-            <h2>Calendarul subunității</h2>
-            <div class="calendar">
-	        	<div id='calendar'></div>
-            </div>
 
-            <footer><a href='../index.php'>Acasă</a> | <a>Contact</a><br>
-            <br></footer>
-        </div>
--->
 
     <!-- Page Content -->
     <div id="site_content">
 		<h2>Calendarul subunității</h2>
-        <div class="calendar">
-            <div class="col-lg-12 text-center">
-                <div id="calendar" class="col-centered">
-                </div>
+            <div class="calendar">
+	        	<div id='calendar'></div>
             </div>
-			
-        </div>
-        <!-- /.row -->
-		
+            
 		<!-- Modal -->
 		<div class="modal fade" id="ModalAdd" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 		  <div class="modal-dialog" role="document">
@@ -171,15 +164,17 @@
 		  </div>
 		</div>
 
-    </div>
+    
     <!-- /.container -->
-
-
-
-    </div>
-    <?php else: 
-      header("Location: loginpage.php");
-      endif; ?>
+    
+	
+	
+	<footer><a href='../index.php'>Acasă</a> | <a>Contact</a><br><br></footer>
+	</div>
+</div>   <!-- main -->
+      
+      
+      
       
 <script src='../js/jquery.js'></script>
 <script src="../js/bootstrap.js"></script>
@@ -229,25 +224,25 @@
 			events: [
 			<?php foreach($events as $event): 
 			
-				$start = explode(" ", $event['start']);
-				$end = explode(" ", $event['end']);
+				$start = explode(" ", $event['START']);
+				$end = explode(" ", $event['END']);
 				if($start[1] == '00:00:00'){
 					$start = $start[0];
 				}else{
-					$start = $event['start'];
+					$start = $event['START'];
 				}
 				if($end[1] == '00:00:00'){
 					$end = $end[0];
 				}else{
-					$end = $event['end'];
+					$end = $event['END'];
 				}
 			?>
 				{
 					id: '<?php echo $event['id']; ?>',
-					title: '<?php echo $event['title']; ?>',
+					title: '<?php echo $event['TITLU']; ?>',
 					start: '<?php echo $start; ?>',
 					end: '<?php echo $end; ?>',
-					color: '<?php echo $event['color']; ?>',
+					color: '<?php echo $event['CULOARE']; ?>',
 				},
 			<?php endforeach; ?>
 			]
@@ -286,6 +281,29 @@
 
 </script>
 
+<!--
+        <div id='site_content'>
+            <h2>Calendarul subunității</h2>
+            <div class="calendar">
+	        	<div id='calendar'></div>
+            </div>
+
+            <footer><a href='../index.php'>Acasă</a> | <a>Contact</a><br>
+            <br></footer>
+        </div>
+-->
+
+    <!-- Page Content
+    <div id="site_content">
+		<h2>Calendarul subunității</h2>
+        <div class="calendar">
+            <div class="col-lg-12 text-center">
+                <div id="calendar" class="col-centered">
+                </div>
+            </div>
+			
+        </div>
+        <!-- /.row -->
 
 
 <!--
@@ -309,5 +327,8 @@
 	});
 </script>
 -->
+ <?php else: 
+      header("Location: loginpage.php");
+      endif; ?>
 </body>
 </html>
