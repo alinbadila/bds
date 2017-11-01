@@ -46,7 +46,7 @@
             <ul id='nav'>
                 <li class='current'><a href='../index.php'>Acasă</a></li>
                 <li class='session'><?php echo "logat ca " . $_SESSION['username'];?></li>
-                <li><a href="php/deconectare.php"/>Ieșire</a></li>
+                <li><a href="deconectare.php"/>Ieșire</a></li>
             </ul>
         </div><!--close menubar-->
     </nav>
