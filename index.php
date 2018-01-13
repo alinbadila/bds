@@ -16,41 +16,28 @@
     
     <title>B.D.S. - pagina principală</title>
     
-<!--     <link rel='stylesheet' type='text/css' href='css/style.css'> -->
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-<!--
-
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-    
     <link rel="shortcut icon" href="favicon.png" />
     <link rel="apple-touch-icon" href="faviconsafari.png" />
--->
-
+	<link rel='stylesheet' type='text/css' href='css/style.css'>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 </head>
 
 <body>
-	<nav class="navbar">
-		<div class="container-fluid">
-	    	<div class="navbar-header">
-				<a class="navbar-brand" href="#">B.D.S.</a>
-	    	</div>
-			<ul class="nav navbar-nav">
-				<li class="active"><a href="index.php">Acasă</a></li>
-				<li><a href="#">Raport intervenție</a></li>
-				<li><a href="#">Raport SMURD</a></li>
-	    	</ul>
-			<ul class="nav navbar-nav navbar-right">
-				<li><span class="glyphicon glyphicon-user"></span> <?php echo "logat ca " . $_SESSION['username'];?></li>
-				<li><a href="php/deconectare.php"><span class="glyphicon glyphicon-log-in"></span> Ieșire</a></li>
-	    	</ul>
-	  	</div>
+	<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+	<!-- Navbar content -->
+		<a class="navbar-brand" href="#">
+			<img src="favicon.png" width="40" height="40" alt="">
+			BDS - baza de date a subunității
+		</a>
+		
+		<form class="form-inline" action="php/deconectare.php">
+			<span class="navbar-text" style="font-size:80%;"><?php echo "logat ca " . $_SESSION['username'];?></span>
+			<button class="btn btn-sm align-middle btn-outline-secondary" type="submit">Ieșire</button>
+		</form>
+		
 	</nav>
 
-
-<!--
     <div class="container">
         <div class="iconGrid">
             <div class="iconContainer">
@@ -58,7 +45,7 @@
             </div>
 
             <div class="iconContainer">
-                <a><img class="iconClass" src="icons/prezenta.png" alt="Prezenta"><span class="caption">Prezența</span></a>
+                <a href="php/prezenta.php"><img class="iconClass" src="icons/prezenta.png" alt="Prezenta"><span class="caption">Prezența</span></a>
             </div>
 
             <div class="iconContainer">
@@ -91,7 +78,6 @@
         <footer><a href='index.php'>Acasă</a> | <a>Contact</a><br>
         <br></footer>
     </div>
--->
     
     <script type='text/javascript' src='js/jquery.js'></script>
 	<script type='text/javascript' src='js/bootstrap.js'></script>
