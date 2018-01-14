@@ -24,21 +24,22 @@
 </head>
 
 <body>
-	<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
-	<!-- Navbar content -->
-		<a class="navbar-brand" href="#">
-			<img src="favicon.png" width="40" height="40" alt="">
-			BDS - baza de date a subunității
-		</a>
-		
-		<form class="form-inline" action="php/deconectare.php">
-			<span class="navbar-text" style="font-size:80%;"><?php echo "logat ca " . $_SESSION['username'];?></span>
-			<button class="btn btn-sm align-middle btn-outline-secondary" type="submit">Ieșire</button>
-		</form>
-		
+	<nav class="navbar navbar-dark navbar-xs" style="background-color: #222222;"> 
+		<!-- Navbar content -->	
+		<div class="container-fluid">
+			 <div class="navbar-header">
+			 	<a class="navbar-brand" style="font-size:80%;" href="#">Baza de date a subunității</a>
+    		</div>
+	
+			<ul class="nav navbar-nav navbar-right">
+				<li><span class="navbar-text" style="font-size:60%;"><?php echo $_SESSION['username'];?>
+				<a href="php/deconectare.php"><img src="icons/logout.png"></a>
+				</span></li>
+    		</ul>
+		</div>	
 	</nav>
 
-    <div class="container">
+    <div class="container-fluid">
         <div class="iconGrid">
             <div class="iconContainer">
                 <a><img class="iconClass" src="icons/organizare.png" alt="Registru organizare"><span class="caption">Registru organizare</span></a>
@@ -75,8 +76,7 @@
             </div>
         </div>
 
-        <footer><a href='index.php'>Acasă</a> | <a>Contact</a><br>
-        <br></footer>
+        <footer><a>Contact</a></footer>
     </div>
     
     <script type='text/javascript' src='js/jquery.js'></script>
