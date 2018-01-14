@@ -26,17 +26,15 @@
 <body>
 	<nav class="navbar navbar-dark navbar-xs" style="background-color: #222222;"> 
 		<!-- Navbar content -->	
-		<div class="container-fluid">
-			 <div class="navbar-header">
-			 	<a class="navbar-brand" style="font-size:80%;" href="#">Baza de date a subunității</a>
-    		</div>
-	
-			<ul class="nav navbar-nav navbar-right">
-				<li><span class="navbar-text" style="font-size:60%;"><?php echo $_SESSION['username'];?>
-				<a href="php/deconectare.php"><img src="icons/logout.png"></a>
-				</span></li>
-    		</ul>
-		</div>	
+		 <div class="navbar-header">
+		 	<a class="navbar-brand" style="font-size:80%;" href="#">Baza de date a subunității</a>
+		</div>
+
+		<ul class="nav navbar-nav navbar-right">
+			<li><span class="navbar-text" style="font-size:60%;"><?php echo $_SESSION['username'];?>
+			<a href="php/deconectare.php"><img src="icons/logout.png"></a>
+			</span></li>
+		</ul>
 	</nav>
 
     <div class="container-fluid">
