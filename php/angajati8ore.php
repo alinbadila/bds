@@ -72,8 +72,7 @@ $( function() {
                 ?>
             </div>
 
-            <footer><a href='../index.php'>Acasă</a> | <a>Contact</a><br>
-            <br></footer>
+            <footer><a href='../index.php'>Acasă</a> | <a>Contact</a></footer>
         </div>
     </div>
     <?php else:
