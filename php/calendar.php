@@ -55,7 +55,6 @@
     <div class="iconGrid">
       Alege altă dată: <input type="text" id="datepicker" maxlength="10" size="10">
       <input type="image" src="../icons/ok.png"/>
-
     </div>
 
     <div class="iconGrid">
