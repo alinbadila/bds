@@ -58,21 +58,6 @@
     </div>
 
     <div class="iconGrid">
-        <div class="iconContainer">
-            <a><img class="iconClass" src="icons/autospeciala_incendiu.png" alt="Raport interventie"><span class="caption">Raport intervenție</span></a>
-        </div>
-
-        <div class="iconContainer">
-            <a><img class="iconClass" src="icons/ambulanta.png" alt="Raport SMURD"><span class="caption">Raport SMURD</span></a>
-        </div>
-
-        <div class="iconContainer">
-            <a><img class="iconClass" src="icons/raport_desca.png" alt="Raport descarcerare"><span class="caption">Raport descarcerare</span></a>
-        </div>
-
-        <div class="iconContainer">
-            <a><img class="iconClass" src="icons/cautare.png" alt="Cauta raport"><span class="caption">Caută raport</span></a>
-        </div>
     </div>
       <footer><a href='../index.php'>Acasă</a> | <a>Contact</a><br><br></footer>
   </div>
