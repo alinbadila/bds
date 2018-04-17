@@ -23,9 +23,18 @@
     <title>B.D.S. - Calendar</title>
     
     <link rel='stylesheet' type='text/css' href='../css/style.css'>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
-   
+    
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	
+	<script>
+		$( function() {
+			$( "#datepicker" ).datepicker();
+  		} );
+	</script>
 </head>
 
 <body>
@@ -50,12 +59,17 @@
             </div>
         </div>
     </div>
+    
+     <div class="container-fluid">
+	 	<p>Alege data: <input type="text" id="datepicker"></p>
+     </div>
 			
 	<footer><a href='../index.php'>Acasă</a> | <a>Contact</a><br><br></footer>
       
 <script src='../js/jquery.js'></script>
 <script src="../js/popper.js"></script>
 <script src="../js/bootstrap.js"></script>
+
 
 
 <?php else: 
