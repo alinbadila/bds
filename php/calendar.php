@@ -6,7 +6,7 @@
   $req = $conn->prepare($sql);
   $req->execute();
   $events = $req->fetchAll();
-  
+
   if ($_SESSION['id']): ?>
 <!DOCTYPE html>
 
@@ -19,28 +19,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="author" content="Alin Bădilă, badila.alin@yahoo.com">
-    
-    <title>B.D.S. - Calendar</title>
-    
-    <link rel='stylesheet' type='text/css' href='../css/style.css'>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-   
-	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
 
-	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-	
-	<script>
-		$( function() {
-			$( "#datepicker" ).datepicker();
-  		} );
-	</script>
+    <title>B.D.S. - Calendar</title>
+
+    <link rel='stylesheet' type='text/css' href='../css/style.css'>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	  <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
 </head>
 
 <body>
 
-	<nav class="navbar navbar-dark navbar-xs" style="background-color: #222222;"> 
-		<!-- Navbar content -->	
+	<nav class="navbar navbar-dark navbar-xs" style="background-color: #222222;">
+		<!-- Navbar content -->
 		 <div class="navbar-header">
 		 	<a class="navbar-brand" style="font-size:80%;" href="#">Baza de date a subunității</a>
 		</div>
@@ -51,27 +41,54 @@
 			</span></li>
 		</ul>
 	</nav>
-	
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h3>Agenda subunității</h3>
-            </div>
+
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-12 text-center">
+              <h3>Agenda subunității</h3>
+              <?php echo date("d/m/Y")?>
+          </div>
+      </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="iconGrid">
+      Alege altă dată: <input type="text" id="datepicker" maxlength="10" size="10">
+      <input type="image" src="../icons/ok.png"/>
+
+    </div>
+
+    <div class="iconGrid">
+        <div class="iconContainer">
+            <a><img class="iconClass" src="icons/autospeciala_incendiu.png" alt="Raport interventie"><span class="caption">Raport intervenție</span></a>
+        </div>
+
+        <div class="iconContainer">
+            <a><img class="iconClass" src="icons/ambulanta.png" alt="Raport SMURD"><span class="caption">Raport SMURD</span></a>
+        </div>
+
+        <div class="iconContainer">
+            <a><img class="iconClass" src="icons/raport_desca.png" alt="Raport descarcerare"><span class="caption">Raport descarcerare</span></a>
+        </div>
+
+        <div class="iconContainer">
+            <a><img class="iconClass" src="icons/cautare.png" alt="Cauta raport"><span class="caption">Caută raport</span></a>
         </div>
     </div>
-    
-     <div class="container-fluid">
-	 	<p>Alege data: <input type="text" id="datepicker"></p>
-     </div>
-			
-	<footer><a href='../index.php'>Acasă</a> | <a>Contact</a><br><br></footer>
-  
-<script src="../js/popper.js"></script>
+      <footer><a href='../index.php'>Acasă</a> | <a>Contact</a><br><br></footer>
+  </div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <script src="../js/bootstrap.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
+<script>
+  $( function() {
+    $( "#datepicker" ).datepicker();
+    } );
+</script>
 
-
-<?php else: 
+<?php else:
       header("Location: loginpage.php");
       endif; ?>
 </body>
