@@ -10,9 +10,9 @@ html
 
 *
 { margin: 0;
-  padding: 0; 
+  padding: 0;
 }
-   
+
 body
 { font: normal 80% Arial, Helvetica, sans-serif;
   color: #FFF;
@@ -39,8 +39,8 @@ article, aside, figure, footer, header, hgroup, nav, section {
 }
 
 .navbar-brand {
-	padding-top:0px !important; 
-	padding-bottom:0 !important; 
+	padding-top:0px !important;
+	padding-bottom:0 !important;
 	min-height: 26px; }
 
 .navbar-header .navbar-toggle {
@@ -50,17 +50,17 @@ article, aside, figure, footer, header, hgroup, nav, section {
 }
 
 .navbar-xs {
-	 min-height:28px; 
-	 height: 28px; 
+	 min-height:28px;
+	 height: 28px;
 }
 
 .navbar-xs .navbar-brand{ padding: 0px 12px;
 	font-size: 16px;
-	line-height: 28px; 
+	line-height: 28px;
 }
-.navbar-xs .navbar-nav > li > a {  
-	padding-top: 0px; 
-	padding-bottom: 0px; 
+.navbar-xs .navbar-nav > li > a {
+	padding-top: 0px;
+	padding-bottom: 0px;
 	line-height: 28px;
 }
 
@@ -77,7 +77,6 @@ footer
   -webkit-border: 7px 7px 7px 7px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px;
   -moz-box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px;
-  box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px;
 }
 
 footer a, footer a:hover
@@ -88,7 +87,7 @@ footer a, footer a:hover
 
 footer a:hover
 { text-decoration: underline;}
-  
+
 h1, h2, h3, h4, h5, h6
 { font: normal 250% 'News Cycle', Arial, sans-serif;
   color: #FFF;
@@ -120,7 +119,7 @@ h5, h6
 }
 
 a, a:hover
-{ 
+{
   background: transparent;
   outline: none;
   text-decoration: none;}
@@ -167,7 +166,7 @@ div.iconContainer {
 
 .iconClass {
 	width: 128px !important;
-    height: 128px !important;
+  height: 128px !important;
 }
 
 img.iconClass {
@@ -177,4 +176,3 @@ img.iconClass:hover {
 	opacity: 0.8;
 	filter: alpha(opacity=100);
 }
-
