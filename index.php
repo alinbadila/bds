@@ -6,26 +6,27 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name='description' content='Managementul unei subunitati de pompieri'>
-    <meta name='keywords' content='pompieri, interventie, calendar, organizare'>
-    <meta http-equiv='content-type' content='text/html; charset=utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
-    <meta name="author" content="Alin Bădilă, badila.alin@yahoo.com">
-    
-    <title>B.D.S. - pagina principală</title>
-    
-    <link rel="shortcut icon" href="favicon.png" />
-    <link rel="apple-touch-icon" href="faviconsafari.png" />
-	<link rel='stylesheet' type='text/css' href='css/style.css'>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <meta name='description' content='Managementul unei subunitati de pompieri'>
+  <meta name='keywords' content='pompieri, interventie, calendar, organizare'>
+  <meta http-equiv='content-type' content='text/html; charset=utf-8'>
+
+  <meta name="author" content="Alin Bădilă, badila.alin@yahoo.com">
+
+  <title>B.D.S. - pagina principală</title>
+
+  <link rel="shortcut icon" href="favicon.png" />
+  <link rel="apple-touch-icon" href="faviconsafari.png" />
+
+
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel='stylesheet' type='text/css' href='css/style.css'>
 </head>
 
 <body>
-	<nav class="navbar navbar-dark navbar-xs" style="background-color: #222222;"> 
-		<!-- Navbar content -->	
+	<nav class="navbar navbar-dark navbar-xs" style="background-color: #222222;">
+		<!-- Navbar content -->
 		 <div class="navbar-header">
 		 	<a class="navbar-brand" style="font-size:80%;" href="#">Baza de date a subunității</a>
 		</div>
@@ -76,10 +77,9 @@
 
         <footer><a>Contact</a></footer>
     </div>
-    
-    <script type='text/javascript' src='js/jquery.js'></script>
-	<script type='text/javascript' src='js/bootstrap.js'></script>
-<?php else: 
+  <script type='text/javascript' src='js/jquery.js'></script>
+	<script type='text/javascript' src='js/bootstrap.min.js'></script>
+<?php else:
       header("Location: php/loginpage.php");
       endif; ?>
 </body>
