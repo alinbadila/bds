@@ -25,7 +25,7 @@
     <div class="container">
       <!-- Continut bara de navigare -->
       <nav class="navbar navbar-dark navbar-xs" role="navigation" style="background-color: #222222;">
-    	  <a class="navbar-brand navbar-header" style="font-size:80%;" href="#">Baza de date a subunității</a>
+    	  <a class="navbar-brand navbar-header" style="font-size:80%;" href="../index.html">Baza de date a subunității</a>
     		<ul class="nav navbar-nav navbar-right">
     			<li>
             <span class="navbar-text" style="font-size:60%;"><?php echo $_SESSION['username'];?>
