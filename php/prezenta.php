@@ -15,7 +15,7 @@
 
   <title>B.D.S. - Prezența</title>
 
-	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 
@@ -29,7 +29,7 @@
     		<ul class="nav navbar-nav navbar-right">
     			<li>
             <span class="navbar-text" style="font-size:60%;"><?php echo $_SESSION['username'];?>
-    			    <a href="..php/deconectare.php"><img src="icons/logout.png"></a>
+    			    <a href="deconectare.php"><img src="../icons/logout.png"></a>
     			  </span>
           </li>
     		</ul>
