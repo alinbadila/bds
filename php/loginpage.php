@@ -47,7 +47,7 @@
     				<h3>Acces</h3>
     			</div>
     			<div class="card-body">
-    				<form>
+    				<form action="autentificare.php" method="post">
     					<div class="input-group form-group">
     						<div class="input-group-prepend">
     							<span class="input-group-text"><i class="fas fa-user"></i></span>
