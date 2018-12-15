@@ -26,7 +26,7 @@
 <body>
   <!-- HEADERUL si BARA DE NAVIGARE -->
   <header class="top" role="header">
-    <div class="container-fluid">
+    <div class="container">
       <!-- Continut bara de navigare -->
       <nav class="navbar navbar-dark navbar-xs" role="navigation" style="background-color: #222222;">
     	  <a class="navbar-brand navbar-header" style="font-size:80%;" href="#">Baza de date a subunității</a>
@@ -41,7 +41,7 @@
     </div>
   </header>
 
-  <div class="container-fluid">
+  <div class="container">
       <div class="row">
           <div class="col-md-3 iconContainer">
               <a><img class="iconClass" src="icons/organizare.png" alt="Registru organizare"><span class="caption">Registru organizare</span></a>
