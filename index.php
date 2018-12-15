@@ -43,37 +43,37 @@
 
   <div class="container">
       <div class="row">
-          <div class="col-md-3 iconContainer">
+          <div class="col-xs-6 col-md-3 iconContainer">
               <a><img class="iconClass" src="icons/organizare.png" alt="Registru organizare"><span class="caption">Registru organizare</span></a>
           </div>
 
-          <div class="col-md-3 iconContainer">
+          <div class="col-xs-6 col-md-3 iconContainer">
               <a href="php/prezenta.php"><img class="iconClass" src="icons/prezenta.png" alt="Prezenta"><span class="caption">Prezența</span></a>
           </div>
 
-          <div class="col-md-3 iconContainer">
+          <div class="col-xs-6 col-md-3 iconContainer">
               <a href="php/calendar.php"><img class="iconClass" src="icons/calendar.png" alt="Agenda zilei"><span class="caption">Agenda zilei</span></a>
           </div>
 
-          <div class="col-md-3 iconContainer">
+          <div class="col-xs-6 col-md-3 iconContainer">
               <a href="php/angajati.php"><img class="iconClass" src="icons/angajat.png" alt="Angajati"><span class="caption">Angajați</span></a>
           </div>
       </div>
 
       <div class="row">
-          <div class="col-md-3 iconContainer">
+          <div class="col-xs-6 col-md-3 iconContainer">
               <a><img class="iconClass" src="icons/autospeciala_incendiu.png" alt="Raport interventie"><span class="caption">Raport intervenție</span></a>
           </div>
 
-          <div class="col-md-3 iconContainer">
+          <div class="col-xs-6 col-md-3 iconContainer">
               <a><img class="iconClass" src="icons/ambulanta.png" alt="Raport SMURD"><span class="caption">Raport SMURD</span></a>
           </div>
 
-          <div class="col-md-3 iconContainer">
+          <div class="col-xs-6 col-md-3 iconContainer">
               <a><img class="iconClass" src="icons/raport_desca.png" alt="Raport descarcerare"><span class="caption">Raport descarcerare</span></a>
           </div>
 
-          <div class="col-md-3 iconContainer">
+          <div class="col-xs-6 col-md-3 iconContainer">
               <a><img class="iconClass" src="icons/cautare.png" alt="Cauta raport"><span class="caption">Caută raport</span></a>
           </div>
       </div>
