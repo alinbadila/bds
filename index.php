@@ -83,7 +83,7 @@
     </div> -->
 
     <div class="container-fluid">
-      <div class="row">
+      <div class="row iconGrid">
             <div class="col-md-3 iconContainer">
                 <a><img class="iconClass" src="icons/organizare.png" alt="Registru organizare"><span class="caption">Registru organizare</span></a>
             </div>
