@@ -26,7 +26,7 @@
 <body>
   <!-- HEADERUL si BARA DE NAVIGARE -->
   <header class="top" role="header">
-    <div class="container">
+    <div class="container-fluid">
       <!-- Continut bara de navigare -->
       <nav class="navbar navbar-dark navbar-xs" role="navigation" style="background-color: #222222;">
     	  <a class="navbar-brand navbar-header" style="font-size:80%;" href="#">Baza de date a subunității</a>
