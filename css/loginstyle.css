@@ -38,6 +38,10 @@ cursor: pointer;
 color: white;
 }
 
+.card-footer h6{
+color: white;
+}
+
 .social_icon{
 position: absolute;
 right: 20px;
