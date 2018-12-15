@@ -16,30 +16,12 @@
   <link rel="apple-touch-icon" href="../faviconsafari.png" />
 
   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <!--Fontawesome CDN-->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="../css/loginstyle.css">
 </head>
 
 <body>
-<!--
-    <div class="content">
-        <h2>Acces</h2>
-
-        <h3>Baza de date a subunității</h3>
-
-        <form action="autentificare.php" method="post">
-            <input type="text" name="uid" placeholder="nume utilizator"><br>
-            <input type="password" name="parola" placeholder="parola"><br>
-            <button class="button" type="submit" name="butonLogin">Conectare</button>
-        </form>
-        <?php
-        $url =  "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
-        if (strpos($url, 'error=nouser') !== false) {
-            # code...
-            echo "<h6>Utilizatorul nu există în baza de date!</h6>";
-        }
-        ?>
-    </div>
--->
     <div class="container">
     	<div class="d-flex justify-content-center h-100">
     		<div class="card">
