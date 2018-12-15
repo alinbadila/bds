@@ -77,9 +77,7 @@
               <a><img class="iconClass" src="icons/cautare.png" alt="Cauta raport"><span class="caption">Caută raport</span></a>
           </div>
       </div>
-
-      <footer class="navbar-xs"><a>Contact</a></footer>
-    </div>
+  </div>
 
   <script type='text/javascript' src='js/jquery.min.js'></script>
   <script type='text/javascript' src='js/popper.min.js'></script>
