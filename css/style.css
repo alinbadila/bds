@@ -167,8 +167,8 @@ div.iconContainer {
 }
 
 .iconClass {
-	width: 128px !important;
-  height: 128px !important;
+	width: 128px;
+  height: 128px;
 }
 
 img.iconClass {
