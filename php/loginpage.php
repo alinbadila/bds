@@ -52,7 +52,7 @@
           if (strpos($url, 'error=nouser') !== false) {
               # code...
               echo '<div class="card-footer">'.
-              				'<div class="d-flex justify-content-center">'.
+              				'<div class="d-flex justify-content-center links">'.
               					'<h6>Utilizatorul nu există în baza de date!</h6>'.
               				'</div>'.
               			'</div>';
