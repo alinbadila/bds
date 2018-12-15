@@ -53,7 +53,7 @@
               # code...
               echo '<div class="card-footer">'.
               				'<div class="d-flex justify-content-center">'.
-              					'<h5>Utilizatorul nu există în baza de date!</h5>'.
+              					'<h3>Utilizatorul nu există în baza de date!</h3>'.
               				'</div>'.
               			'</div>';
           }
