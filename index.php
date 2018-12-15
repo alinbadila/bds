@@ -83,7 +83,6 @@
     </div> -->
 
     <div class="container-fluid">
-      <div class="iconGrid">
         <div class="row">
             <div class="col-md-3 iconContainer">
                 <a><img class="iconClass" src="icons/organizare.png" alt="Registru organizare"><span class="caption">Registru organizare</span></a>
@@ -101,22 +100,21 @@
                 <a href="php/angajati.php"><img class="iconClass" src="icons/angajat.png" alt="Angajati"><span class="caption">Angajați</span></a>
             </div>
         </div>
-      </div>  
 
-        <div class="iconGrid">
-            <div class="iconContainer">
+        <div class="row">
+            <div class="col-md-3 iconContainer">
                 <a><img class="iconClass" src="icons/autospeciala_incendiu.png" alt="Raport interventie"><span class="caption">Raport intervenție</span></a>
             </div>
 
-            <div class="iconContainer">
+            <div class="col-md-3 iconContainer">
                 <a><img class="iconClass" src="icons/ambulanta.png" alt="Raport SMURD"><span class="caption">Raport SMURD</span></a>
             </div>
 
-            <div class="iconContainer">
+            <div class="col-md-3 iconContainer">
                 <a><img class="iconClass" src="icons/raport_desca.png" alt="Raport descarcerare"><span class="caption">Raport descarcerare</span></a>
             </div>
 
-            <div class="iconContainer">
+            <div class="col-md-3 iconContainer">
                 <a><img class="iconClass" src="icons/cautare.png" alt="Cauta raport"><span class="caption">Caută raport</span></a>
             </div>
         </div>
