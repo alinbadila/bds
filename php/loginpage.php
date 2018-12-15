@@ -51,7 +51,11 @@
           $url =  "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
           if (strpos($url, 'error=nouser') !== false) {
               # code...
-              echo "<h6>Utilizatorul nu există în baza de date!</h6>";
+              echo "<div class='card-footer'>
+              				<div class='d-flex justify-content-center'>
+              					<h5>Utilizatorul nu există în baza de date!</h5>;
+              				</div>
+              			</div>"
           }
           ?>
     			</div>
