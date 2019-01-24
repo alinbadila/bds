@@ -38,43 +38,54 @@
     </div>
   </header>
 
-        <div id='site_content'>
-            <h2>Personal angajat la program zilnic de 8 ore</h2>
-
-            <div class="iconGrid">
-                <?php
-	            try {
-					$conn = new PDO('mysql:host=aluna.go.ro;dbname=BDS;charset=utf8', $_SESSION['dbusername'], $_SESSION['dbpassword']);
-				}
-				catch(Exception $e) {
-					die('Eroare : '.$e->getMessage());
-				}
-	            $sql = "SELECT BDS.grade.GRAD, BDS.date_pers.NUME, BDS.date_pers.PRENUME, BDS.functii.FUNCTIE_DETALIATA
-                        FROM BDS.grade
-                            INNER JOIN BDS.functii ON BDS.grade.ID_CADRU = BDS.functii.ID_CADRU
-                            INNER JOIN BDS.date_pers ON BDS.functii.ID_CADRU = BDS.date_pers.ID_CADRU
-                        WHERE (BDS.functii.TURA = 0) and (BDS.functii.ID_CADRU IS NOT NULL);";
-	            $query = $conn->prepare($sql);
-	            $query -> execute();
-	            $rezultat = $query -> fetchAll();
-	            if (!$rezultat) {
-		            echo "Niciun rezultat.";
-	            } else {
-		            $nrcrt = 0;
-		            echo "<div id=\"accordion\">";
-		            foreach ($rezultat as $rand) {
-			            $nrcrt++;
-			            echo "<h3>" . $nrcrt . ". " . $rand["GRAD"]. " " . $rand["NUME"] . " " . $rand["PRENUME"]. " - " . $rand["FUNCTIE_DETALIATA"] . "</h3>";
-		            }
-		            echo "</div>";
-	            }
-	            $query -> closeCursor();
-				$conn = NULL;
-                ?>
-            </div>
-    </div>
-    <?php else:
-        header("Location: loginpage.php");
-    endif; ?>
+  <div class="container">
+    <h2>Personal angajat la program zilnic de 8 ore</h2>
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th>Nr.crt.</th>
+          <th>Grad</th>
+          <th>Nume și prenume</th>
+          <th>Funcția ocupată</th>
+        </tr>
+      </thead>
+      <tbody>
+        <?php
+            try {
+                $conn = new PDO('mysql:host=aluna.go.ro;dbname=BDS;charset=utf8', $_SESSION['dbusername'], $_SESSION['dbpassword']);
+            } catch (Exception $e) {
+                die('Eroare : '.$e->getMessage());
+            }
+            $sql = "SELECT BDS.grade.GRAD, BDS.date_pers.NUME, BDS.date_pers.PRENUME, BDS.functii.FUNCTIE_DETALIATA
+                    FROM BDS.grade
+                        INNER JOIN BDS.functii ON BDS.grade.ID_CADRU = BDS.functii.ID_CADRU
+                        INNER JOIN BDS.date_pers ON BDS.functii.ID_CADRU = BDS.date_pers.ID_CADRU
+                    WHERE (BDS.functii.TURA = 0) and (BDS.functii.ID_CADRU IS NOT NULL);";
+            $query = $conn->prepare($sql);
+            $query -> execute();
+            $rezultat = $query -> fetchAll();
+            if (!$rezultat) {
+                echo "Niciun rezultat.";
+            } else {
+                $nrcrt = 0;
+                foreach ($rezultat as $rand) {
+                    $nrcrt++;
+                    echo "<tr>";
+                    echo "<td>" . $nrcrt . "</td>";
+                    echo "<td>" . $rand["GRAD"] . "</td>";
+                    echo "<td>" . $rand["NUME"] . " " . $rand["PRENUME"] . "</td>";
+                    echo "<td>" . $rand["FUNCTIE_DETALIATA"] . "</td>";
+                    echo "</tr>"
+                }
+            }
+            $query -> closeCursor();
+            $conn = null;
+            ?>
+      </tbody>
+    </table>
+  </div>
+<?php else:
+    header("Location: loginpage.php");
+endif; ?>
 </body>
 </html>
