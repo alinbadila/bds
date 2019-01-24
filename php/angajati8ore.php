@@ -41,7 +41,7 @@
   <div class="container">
     <h2>Personal angajat la program zilnic de 8 ore</h2>
     <table class="table">
-      <thead class="thead-dark">
+      <thead class="thead-light">
         <tr>
           <th>Nr.crt.</th>
           <th>Grad</th>
