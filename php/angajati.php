@@ -5,13 +5,13 @@
 
 <html lang="ro">
 <head>
-
-	<meta charset="utf-8">
+  <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name='description' content='Managementul unei subunitati de pompieri'>
   <meta name='keywords' content='pompieri, interventie, calendar, organizare'>
   <meta http-equiv='content-type' content='text/html; charset=utf-8'>
+
   <meta name="author" content="Alin Bădilă, badila.alin@yahoo.com">
 
   <title>B.D.S. - Angajați</title>
