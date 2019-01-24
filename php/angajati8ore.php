@@ -75,7 +75,7 @@
                     echo "<td>" . $rand["GRAD"] . "</td>";
                     echo "<td>" . $rand["NUME"] . " " . $rand["PRENUME"] . "</td>";
                     echo "<td>" . $rand["FUNCTIE_DETALIATA"] . "</td>";
-                    echo "</tr>"
+                    echo "</tr>";
                 }
             }
             $query -> closeCursor();
