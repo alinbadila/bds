@@ -48,7 +48,7 @@
           </div>
 
           <div class="col-xs-6 col-sm-6 col-md-3 iconContainer">
-              <a href="php/prezenta.php"><img class="iconClass" src="icons/prezenta.png" alt="Prezenta"><span class="caption">Prezența</span></a>
+              <a><img class="iconClass" src="icons/prezenta.png" alt="Prezenta"><span class="caption">Prezența</span></a>
           </div>
 
           <div class="col-xs-6 col-sm-6 col-md-3 iconContainer">
