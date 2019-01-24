@@ -65,7 +65,6 @@
 		            foreach ($rezultat as $rand) {
 			            $nrcrt++;
 			            echo "<h3>" . $nrcrt . ". " . $rand["GRAD"]. " " . $rand["NUME"] . " " . $rand["PRENUME"]. " - " . $rand["FUNCTIE_DETALIATA"] . "</h3>";
-                        echo "<div>" . "<p> Test accordion </p> <p>Test 2</p>" . "</div>";
 		            }
 		            echo "</div>";
 	            }
