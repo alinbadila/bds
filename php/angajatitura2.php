@@ -60,7 +60,7 @@
                     FROM BDS.grade
                         INNER JOIN BDS.functii ON BDS.grade.ID_CADRU = BDS.functii.ID_CADRU
                         INNER JOIN BDS.date_pers ON BDS.functii.ID_CADRU = BDS.date_pers.ID_CADRU
-                    WHERE (BDS.functii.TURA = 1) and (BDS.functii.ID_CADRU IS NOT NULL);";
+                    WHERE (BDS.functii.TURA = 2) and (BDS.functii.ID_CADRU IS NOT NULL);";
             $query = $conn->prepare($sql);
             $query -> execute();
             $rezultat = $query -> fetchAll();
