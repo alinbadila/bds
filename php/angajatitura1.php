@@ -40,7 +40,7 @@
 
   <div class="container">
     <h2>Personalul turei 1</h2>
-    <table class="table">
+    <table class="table table-dark table-striped">
       <thead class="thead-light">
         <tr>
           <th>Nr.crt.</th>
