@@ -50,8 +50,12 @@
               <h3>Agenda subunității</h3>
               <?php echo date("d/m/Y")?>
           </div>
-          <h3 class="text-center"> Alege altă dată: <input type="text" id="datepicker" maxlength="10" size="10"></h2>
+      </div>
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h3> Alege altă dată: <input type="text" id="datepicker" maxlength="10" size="10"></h2>
           <input type="image" src="../icons/ok.png"/>
+        </div>
       </div>
   </div>
 
