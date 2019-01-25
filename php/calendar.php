@@ -241,8 +241,6 @@
                         echo "<td>" . $rand["LOCATIE"] . "</td>";
                         echo "<td>" . $rand["DATA_INCEPUT"] . "</td>";
                         echo "<td>" . $rand["DATA_SFARSIT"] . "</td>";
-                        echo "<td>" . $rand["DIAGNOSTIC"] . "</td>";
-                        echo "<td>" . $rand["COD_DIAGNOSTIC"] . "</td>";
                         echo "<td>" . $rand["TURA"] . "</td>";
                         echo "</tr>";
                     }
