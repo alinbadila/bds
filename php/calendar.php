@@ -52,8 +52,10 @@
           </div>
       </div>
       <div class="row">
-        <div class="col-lg-12 text-center">
+        <div class="col-lg-6 text-center">
           <h3> Alege altă dată: <input type="text" id="datepicker" maxlength="10" size="10"></h2>
+        </div>
+        <div class="col-lg-6">
           <input type="image" src="../icons/ok.png"/>
         </div>
       </div>
