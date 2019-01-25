@@ -191,6 +191,71 @@
           </div>
       </div>
       <!-- Tabel cursuri-->
+      <div class="row">
+        <table class="table table-dark table-striped">
+          <thead class="thead-light">
+            <tr>
+              <th>Nr.crt.</th>
+              <th>Grad</th>
+              <th>Nume și prenume</th>
+              <th>Tipul cursului</th>
+              <th>Descrierea cursului</th>
+              <th>Locul desfasurarii</th>
+              <th>Data inceput</th>
+              <th>Data sfarsit</th>
+              <th>Tura</th>
+            </tr>
+          </thead>
+          <tbody>
+            <?php
+                try {
+                    $conn = new PDO('mysql:host=aluna.go.ro;dbname=BDS;charset=utf8', $_SESSION['dbusername'], $_SESSION['dbpassword']);
+                } catch (Exception $e) {
+                    die('Eroare : '.$e->getMessage());
+                }
+                $sql = "SELECT  BDS.grade.GRAD, BDS.date_pers.NUME, BDS.date_pers.PRENUME,
+		                            BDS.cursuri.TIP_CURS, BDS.cursuri.DESCRIERE, BDS.cursuri.LOCATIE,
+                                BDS.cursuri.DATA_INCEPUT, BDS.cursuri.DATA_SFARSIT, BDS.functii.TURA
+	                      FROM BDS.grade
+			                          INNER JOIN BDS.cursuri ON BDS.grade.ID_CADRU = BDS.cursuri.ID_CADRU
+			                          INNER JOIN BDS.date_pers ON BDS.grade.ID_CADRU = BDS.date_pers.ID_CADRU
+                                INNER JOIN BDS.functii ON BDS.grade.ID_CADRU = BDS.functii.ID_CADRU
+                        WHERE (BDS.functii.ID_CADRU IS NOT NULL) and
+                              (CURDATE() >= BDS.cursuri.DATA_INCEPUT and CURDATE() <= BDS.cursuri.DATA_SFARSIT)
+                        ORDER BY BDS.functii.TURA;";
+                $query = $conn->prepare($sql);
+                $query -> execute();
+                $rezultat = $query -> fetchAll();
+                if (!$rezultat) {
+                    echo "Nicio persoana nu se afla la curs in data mentionata.";
+                } else {
+                    $nrcrt = 0;
+                    foreach ($rezultat as $rand) {
+                        $nrcrt++;
+                        echo "<tr>";
+                        echo "<td>" . $nrcrt . "</td>";
+                        echo "<td>" . $rand["GRAD"] . "</td>";
+                        echo "<td>" . $rand["NUME"] . " " . $rand["PRENUME"] . "</td>";
+                        echo "<td>" . $rand["TIP_CURS"] . "</td>";
+                        echo "<td>" . $rand["DESCRIERE"] . "</td>";
+                        echo "<td>" . $rand["LOCATIE"] . "</td>";
+                        echo "<td>" . $rand["DATA_INCEPUT"] . "</td>";
+                        echo "<td>" . $rand["DATA_SFARSIT"] . "</td>";
+                        echo "<td>" . $rand["DIAGNOSTIC"] . "</td>";
+                        echo "<td>" . $rand["COD_DIAGNOSTIC"] . "</td>";
+                        echo "<td>" . $rand["TURA"] . "</td>";
+                        echo "</tr>";
+                    }
+                }
+                $query -> closeCursor();
+                $conn = null;
+                ?>
+          </tbody>
+        </table>
+      </div>
+
+
+
 
       <div class="row">
           <div class="col-lg-12 text-left">
