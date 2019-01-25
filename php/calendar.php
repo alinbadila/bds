@@ -126,16 +126,85 @@
           </tbody>
         </table>
       </div>
+
       <div class="row">
           <div class="col-lg-12 text-left">
               <h3>Concedii medicale</h3>
           </div>
       </div>
+      <!-- Tabel concedii medicale-->
+      <div class="row">
+        <table class="table table-dark table-striped">
+          <thead class="thead-light">
+            <tr>
+              <th>Nr.crt.</th>
+              <th>Grad</th>
+              <th>Nume și prenume</th>
+              <th>Data inceput</th>
+              <th>Data sfarsit</th>
+              <th>Diagnostic</th>
+              <th>Cod diagnostic</th>
+              <th>Tura</th>
+            </tr>
+          </thead>
+          <tbody>
+            <?php
+                try {
+                    $conn = new PDO('mysql:host=aluna.go.ro;dbname=BDS;charset=utf8', $_SESSION['dbusername'], $_SESSION['dbpassword']);
+                } catch (Exception $e) {
+                    die('Eroare : '.$e->getMessage());
+                }
+                $sql = "SELECT  BDS.grade.GRAD, BDS.date_pers.NUME, BDS.date_pers.PRENUME,
+		                            BDS.concedii_medicale.DATA_INCEPUT, BDS.concedii_medicale.DATA_SFARSIT,
+                                BDS.concedii_medicale.DIAGNOSTIC, BDS.concedii_medicale.COD_DIAGNOSTIC, BDS.functii.TURA
+	                      FROM BDS.grade
+			                          INNER JOIN BDS.concedii_medicale ON BDS.grade.ID_CADRU = BDS.concedii_medicale.ID_CADRU
+			                          INNER JOIN BDS.date_pers ON BDS.grade.ID_CADRU = BDS.date_pers.ID_CADRU
+                                INNER JOIN BDS.functii ON BDS.grade.ID_CADRU = BDS.functii.ID_CADRU
+                        WHERE (BDS.functii.ID_CADRU IS NOT NULL) and
+                              (CURDATE() >= BDS.concedii_medicale.DATA_INCEPUT and CURDATE() <= BDS.concedii_medicale.DATA_SFARSIT)
+                        ORDER BY BDS.functii.TURA;";
+                $query = $conn->prepare($sql);
+                $query -> execute();
+                $rezultat = $query -> fetchAll();
+                if (!$rezultat) {
+                    echo "Niciun rezultat.";
+                } else {
+                    $nrcrt = 0;
+                    foreach ($rezultat as $rand) {
+                        $nrcrt++;
+                        echo "<tr>";
+                        echo "<td>" . $nrcrt . "</td>";
+                        echo "<td>" . $rand["GRAD"] . "</td>";
+                        echo "<td>" . $rand["NUME"] . " " . $rand["PRENUME"] . "</td>";
+                        echo "<td>" . $rand["DATA_INCEPUT"] . "</td>";
+                        echo "<td>" . $rand["DATA_SFARSIT"] . "</td>";
+                        echo "<td>" . $rand["DIAGNOSTIC"] . "</td>";
+                        echo "<td>" . $rand["COD_DIAGNOSTIC"] . "</td>";
+                        echo "<td>" . $rand["TURA"] . "</td>";
+                        echo "</tr>";
+                    }
+                }
+                $query -> closeCursor();
+                $conn = null;
+                ?>
+          </tbody>
+        </table>
+      </div>
+
       <div class="row">
           <div class="col-lg-12 text-left">
-              <h3>Misiuni sau cursuri</h3>
+              <h3>Cursuri</h3>
           </div>
       </div>
+      <!-- Tabel cursuri-->
+
+      <div class="row">
+          <div class="col-lg-12 text-left">
+              <h3>Misiuni</h3>
+          </div>
+      </div>
+      <!-- Tabel misiuni-->
   </div>
 
   <script src="../js/jquery.min.js"></script>
