@@ -1,12 +1,5 @@
 <?php
   session_start();
-
-  require_once('dbhandler.php');
-  $sql = "SELECT id, TITLU, CULOARE, START, END FROM evenimente ";
-  $req = $conn->prepare($sql);
-  $req->execute();
-  $events = $req->fetchAll();
-
   if ($_SESSION['id']): ?>
 <!DOCTYPE html>
 
@@ -104,7 +97,7 @@
                 $query -> execute();
                 $rezultat = $query -> fetchAll();
                 if (!$rezultat) {
-                    echo "Niciun rezultat.";
+                    echo "Nicio persoana nu se afla in concediu de odihna sau suplimentar in data mentionata.";
                 } else {
                     $nrcrt = 0;
                     foreach ($rezultat as $rand) {
@@ -168,7 +161,7 @@
                 $query -> execute();
                 $rezultat = $query -> fetchAll();
                 if (!$rezultat) {
-                    echo "Niciun rezultat.";
+                    echo "Nicio persoana nu se afla in concediu medical in data mentionata.";
                 } else {
                     $nrcrt = 0;
                     foreach ($rezultat as $rand) {
