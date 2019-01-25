@@ -47,7 +47,7 @@
   <div class="container">
       <div class="row">
           <div class="col-lg-12 text-center">
-              <h3>Agenda subunității</h3>
+              <h2>Agenda subunității</h3>
               <?php echo date("d/m/Y")?>
           </div>
       </div>
