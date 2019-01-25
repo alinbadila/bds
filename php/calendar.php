@@ -47,20 +47,39 @@
   <div class="container">
       <div class="row">
           <div class="col-lg-12 text-center">
-              <h2>Agenda subunității</h3>
+              <h2>Agenda subunității</h2>
               <?php echo date("d/m/Y")?>
           </div>
       </div>
       <div class="row">
         <div class="col-lg-6 text-center">
-          <h3> Alege altă dată: <input type="text" id="datepicker" maxlength="10" size="10"></h2>
+          <h3> Alege altă dată: <input type="text" id="datepicker" maxlength="10" size="10"></h3>
         </div>
         <div class="col-lg-6">
           <input type="image" src="../icons/ok.png"/>
         </div>
       </div>
+      <div class="row">
+        <div class="col-lg-12 text-left">
+            <h3>Sarcinile zilei</h3>
+        </div>
+      </div>
+      <div class="row">
+          <div class="col-lg-12 text-left">
+              <h3>Concedii de odihna</h3>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-lg-12 text-left">
+              <h3>Concedii medicale</h3>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-lg-12 text-left">
+              <h3>Misiuni sau cursuri</h3>
+          </div>
+      </div>
   </div>
-
 
   <script src="../js/jquery.min.js"></script>
   <script src="../js/jquery-ui.min.js"></script>
