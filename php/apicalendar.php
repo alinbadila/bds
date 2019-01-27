@@ -22,19 +22,19 @@
     if (!$rezultat) {
         echo "Nicio persoana nu se afla in concediu de odihna sau suplimentar in data mentionata.";
     } else {
-        echo  "<table class=\"table table-dark table-striped\">"
-          echo "<thead class=\"thead-light\">"
-            echo "<tr>"
-              echo "<th>Nr.crt.</th>"
-              echo "<th>Grad</th>"
-              echo "<th>Nume și prenume</th>"
-              echo "<th>Data inceput</th>"
-              echo "<th>Data sfarsit</th>"
-              echo "<th>Tip concediu</th>"
-              echo "<th>Tura</th>"
-            echo "</tr>"
-          echo "</thead>"
-          echo "<tbody>"
+        echo  "<table class=\"table table-dark table-striped\">";
+          echo "<thead class=\"thead-light\">";
+            echo "<tr>";
+              echo "<th>Nr.crt.</th>";
+              echo "<th>Grad</th>";
+              echo "<th>Nume și prenume</th>";
+              echo "<th>Data inceput</th>";
+              echo "<th>Data sfarsit</th>";
+              echo "<th>Tip concediu</th>";
+              echo "<th>Tura</th>";
+            echo "</tr>";
+          echo "</thead>";
+          echo "<tbody>";
               $nrcrt = 0;
               foreach ($rezultat as $rand) {
                   $nrcrt++;
@@ -48,8 +48,8 @@
                   echo "<td>" . $rand["TURA"] . "</td>";
                   echo "</tr>";
                 }
-          echo "</tbody>"
-        echo "</table>"
+          echo "</tbody>";
+        echo "</table>";
         }
     $query -> closeCursor();
     $conn = null;
