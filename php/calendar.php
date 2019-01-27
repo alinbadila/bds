@@ -62,9 +62,9 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-lg-12 text-left">
-            <h3>Sarcinile zilei</h3>
-        </div>
+          <div class="col-lg-12 text-left">
+              <h3>Sarcinile zilei</h3>
+          </div>
       </div>
       <!-- Tabel concedii de odihna-->
       <div class="row">
