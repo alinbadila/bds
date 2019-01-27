@@ -55,7 +55,7 @@
       </div>
       <div class="row">
         <div class="col-lg-12 text-center">
-          <p> Alege altă dată: <input type="text" id="datepicker" maxlength="10" size="10">
+          <p> Alege altă dată: <input type="text" id="datepicker" maxlength="10" size="12">
               <input class="btn btn-primary btn-sm" type="submit" value="ok">
           <p>
         </div>
