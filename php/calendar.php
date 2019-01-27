@@ -68,7 +68,7 @@
           </div>
       </div>
       <?php
-        afiseazaConcedii($conn);
+        afiseazaConcedii();
       ?>
       <!----------------------------->
 
@@ -87,7 +87,7 @@
           </div>
       </div>
       <?php
-        afiseazaConcediiMedicale($conn);
+        afiseazaConcediiMedicale();
       ?>
       <!---------------------------->
 
@@ -98,7 +98,7 @@
           </div>
       </div>
       <?php
-      afiseazaCursuri($conn);
+      afiseazaCursuri();
       ?>
       <!------------------>
 
