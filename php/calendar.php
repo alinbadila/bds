@@ -73,7 +73,7 @@
           </div>
       </div>
       <?php
-        afiseazaConcedii();
+        afiseazaConcedii($conn);
       ?>
       <!----------------------------->
 
@@ -92,7 +92,7 @@
           </div>
       </div>
       <?php
-        afiseazaConcediiMedicale();
+        afiseazaConcediiMedicale($conn);
       ?>
       <!---------------------------->
 
@@ -103,7 +103,7 @@
           </div>
       </div>
       <?php
-      afiseazaCursuri();
+      afiseazaCursuri($conn);
       ?>
       <!------------------>
 
