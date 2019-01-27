@@ -56,7 +56,7 @@
       <div class="row">
         <div class="col-lg-12 text-center">
           <p> Alege altă dată: <input type="text" id="datepicker" maxlength="10" size="12">
-              <input class="btn btn-primary btn-sm" type="submit" value="ok">
+              <input class="btn btn-primary btn-sm" id="butonOkData" type="submit" value="ok">
           <p>
         </div>
       </div>
@@ -120,6 +120,9 @@
       ?>
       <!------------------>
   </div>
+  <?php
+    $conn = null;
+   ?>
 
   <script src="../js/jquery.min.js"></script>
   <script src="../js/jquery-ui.min.js"></script>
@@ -129,9 +132,7 @@
       $( "#datepicker" ).datepicker();
       } );
   </script>
-<?php
-  $conn = null;
- ?>
+
 <?php else:
       header("Location: loginpage.php");
       endif; ?>
