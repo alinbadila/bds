@@ -50,7 +50,7 @@
       <div class="row">
           <div class="col-lg-12 text-center">
               <h2>Agenda subunității</h2>
-              <?php echo date("d/m/Y")?>
+              <?php echo "<h2>" . date("d/m/Y") . "</h2>"?>
           </div>
       </div>
       <div class="row">
