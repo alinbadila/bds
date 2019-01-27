@@ -7,7 +7,7 @@
   }
 
 /* Procedura afiseaza in tabel persoanele aflate in concediu la data primita ca parametru. */
-  function afiseazaConcedii() {
+  function afiseazaConcedii($conn) {
     $sql = "SELECT  BDS.grade.GRAD, BDS.date_pers.NUME, BDS.date_pers.PRENUME,
                     BDS.concedii.DATA_INCEPUT, BDS.concedii.DATA_SFARSIT, BDS.concedii.TIP,
                     BDS.functii.TURA
@@ -57,7 +57,7 @@
   }
 
 /* Procedura afiseaza in tabel persoanele aflate in concediu medical la data primita ca parametru */
-function afiseazaConcediiMedicale() {
+function afiseazaConcediiMedicale($conn) {
   $sql = "SELECT  BDS.grade.GRAD, BDS.date_pers.NUME, BDS.date_pers.PRENUME,
                   BDS.concedii_medicale.DATA_INCEPUT, BDS.concedii_medicale.DATA_SFARSIT,
                   BDS.concedii_medicale.DIAGNOSTIC, BDS.concedii_medicale.COD_DIAGNOSTIC, BDS.functii.TURA
@@ -109,7 +109,7 @@ function afiseazaConcediiMedicale() {
   }
 
   /* Procedura afiseaza in tabel persoanele aflate la cursuri in data primita ca parametru */
-  function afiseazaCursuri() {
+  function afiseazaCursuri($conn) {
     $sql = "SELECT  BDS.grade.GRAD, BDS.date_pers.NUME, BDS.date_pers.PRENUME,
                     BDS.cursuri.TIP_CURS, BDS.cursuri.DESCRIERE, BDS.cursuri.LOCATIE,
                     BDS.cursuri.DATA_INCEPUT, BDS.cursuri.DATA_SFARSIT, BDS.functii.TURA
