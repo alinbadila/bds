@@ -89,7 +89,13 @@
       <!-- Tabel concedii medicale-->
       <?php
         include 'apicalendar.php';
-        afiseazaConcediiMedicale();
+        try {
+            $conn = new PDO('mysql:host=aluna.go.ro;dbname=BDS;charset=utf8', $_SESSION['dbusername'], $_SESSION['dbpassword']);
+        } catch (Exception $e) {
+            die('Eroare : '.$e->getMessage());
+        }
+        afiseazaConcediiMedicale($conn);
+        $conn = null;
       ?>
 
       <div class="row">

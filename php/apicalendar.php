@@ -49,17 +49,10 @@
         echo "</table>";
         }
     $query -> closeCursor();
-
   }
 
 /* Procedura afiseaza in tabel persoanele aflate in concediu medical la data primita ca parametru */
-function afiseazaConcediiMedicale() {
-  try {
-      $conn = new PDO('mysql:host=aluna.go.ro;dbname=BDS;charset=utf8', $_SESSION['dbusername'], $_SESSION['dbpassword']);
-  } catch (Exception $e) {
-      die('Eroare : '.$e->getMessage());
-  }
-  echo "sunt in procedura concedii medcale";
+function afiseazaConcediiMedicale($conn) {
   $sql = "SELECT  BDS.grade.GRAD, BDS.date_pers.NUME, BDS.date_pers.PRENUME,
                   BDS.concedii_medicale.DATA_INCEPUT, BDS.concedii_medicale.DATA_SFARSIT,
                   BDS.concedii_medicale.DIAGNOSTIC, BDS.concedii_medicale.COD_DIAGNOSTIC, BDS.functii.TURA
@@ -108,10 +101,7 @@ function afiseazaConcediiMedicale() {
       echo "</table>";
       }
   $query -> closeCursor();
-  $conn = null;
   }
-
-
 ?>
 
 <!-- Procedura afiseaza in tabel persoanele aflate la cursuri in data primita ca parametru-->
