@@ -65,6 +65,7 @@
     } catch (Exception $e) {
         die('Eroare : '.$e->getMessage());
     }
+    echo "sunt in procedura concedii medcale";
     $sql = "SELECT  BDS.grade.GRAD, BDS.date_pers.NUME, BDS.date_pers.PRENUME,
                     BDS.concedii_medicale.DATA_INCEPUT, BDS.concedii_medicale.DATA_SFARSIT,
                     BDS.concedii_medicale.DIAGNOSTIC, BDS.concedii_medicale.COD_DIAGNOSTIC, BDS.functii.TURA
