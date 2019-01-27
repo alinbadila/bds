@@ -1,9 +1,17 @@
 <?php
   session_start();
   if ($_SESSION['id']): ?>
-<!DOCTYPE html>
-<?php include 'apicalendar.php'; ?>
 
+<?php
+  include 'apicalendar.php';
+  try {
+      $conn = new PDO('mysql:host=aluna.go.ro;dbname=BDS;charset=utf8', $_SESSION['dbusername'], $_SESSION['dbpassword']);
+  } catch (Exception $e) {
+      die('Eroare : '.$e->getMessage());
+  }
+?>
+
+<!DOCTYPE html>
 <html lang="ro">
 <head>
     <meta name='description' content='Calendar'>
@@ -65,13 +73,7 @@
       </div>
       <!-- Tabel concedii de odihna-->
       <?php
-        try {
-            $conn = new PDO('mysql:host=aluna.go.ro;dbname=BDS;charset=utf8', $_SESSION['dbusername'], $_SESSION['dbpassword']);
-        } catch (Exception $e) {
-            die('Eroare : '.$e->getMessage());
-        }
         afiseazaConcedii($conn);
-        $conn = null;
       ?>
 
       <div class="row">
@@ -88,13 +90,7 @@
       </div>
       <!-- Tabel concedii medicale-->
       <?php
-        try {
-            $conn = new PDO('mysql:host=aluna.go.ro;dbname=BDS;charset=utf8', $_SESSION['dbusername'], $_SESSION['dbpassword']);
-        } catch (Exception $e) {
-            die('Eroare : '.$e->getMessage());
-        }
         afiseazaConcediiMedicale($conn);
-        $conn = null;
       ?>
 
       <div class="row">
@@ -104,13 +100,7 @@
       </div>
       <!-- Tabel cursuri-->
       <?php
-      try {
-          $conn = new PDO('mysql:host=aluna.go.ro;dbname=BDS;charset=utf8', $_SESSION['dbusername'], $_SESSION['dbpassword']);
-      } catch (Exception $e) {
-          die('Eroare : '.$e->getMessage());
-      }
       afiseazaCursuri($conn);
-      $conn = null;
       ?>
 
       <div class="row">
@@ -129,6 +119,10 @@
       $( "#datepicker" ).datepicker();
       } );
   </script>
+
+<?php
+  $conn = null;
+?>
 
 <?php else:
       header("Location: loginpage.php");
