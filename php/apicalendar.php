@@ -1,11 +1,5 @@
 
 <?php
-  try {
-      global $conn = new PDO('mysql:host=aluna.go.ro;dbname=BDS;charset=utf8', $_SESSION['dbusername'], $_SESSION['dbpassword']);
-  } catch (Exception $e) {
-      die('Eroare : '.$e->getMessage());
-  }
-
 /* Procedura afiseaza in tabel persoanele aflate in concediu la data primita ca parametru. */
   function afiseazaConcedii($conn) {
     $sql = "SELECT  BDS.grade.GRAD, BDS.date_pers.NUME, BDS.date_pers.PRENUME,
@@ -161,5 +155,4 @@ function afiseazaConcediiMedicale($conn) {
         }
     $query -> closeCursor();
   }
-  $conn = null;
 ?>
