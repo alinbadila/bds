@@ -66,7 +66,7 @@ function afiseazaConcediiMedicale($conn) {
   $query -> execute();
   $rezultat = $query -> fetchAll();
   if (!$rezultat) {
-      echo "Nicio persoana nu se afla in concediu medical la data mentionata.";
+      echo "<p class=\"text-warning\">Nicio persoana nu se afla in concediu medical la data mentionata.</p>";
   } else {
       echo  "<table class=\"table table-dark table-striped\">";
         echo "<thead class=\"thead-light\">";
@@ -118,7 +118,8 @@ function afiseazaConcediiMedicale($conn) {
     $query -> execute();
     $rezultat = $query -> fetchAll();
     if (!$rezultat) {
-        echo "Nicio persoana nu se afla la curs in data mentionata.";
+        echo "";
+        echo "<p class=\"text-warning\">Nicio persoana nu se afla la curs in data mentionata.</p>";
     } else {
         echo  "<table class=\"table table-dark table-striped\">";
           echo "<thead class=\"thead-light\">";
