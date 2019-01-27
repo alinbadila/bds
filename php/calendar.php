@@ -82,6 +82,9 @@
               <h3>Libere planificate sau recuperari</h3>
           </div>
       </div>
+      <?php
+        afiseazaLibere($conn);
+      ?>
       <!------------------>
 
       <!-- Tabel concedii medicale-->
