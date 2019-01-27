@@ -63,10 +63,11 @@
           </div>
       </div>
 
-      <?php include 'apicalendar.php'
+      <?php
+        include 'apicalendar.php';
         afiseazaConcedii();
       ?>
-      
+
       <!-- Tabel concedii de odihna-->
       <div class="row">
         <table class="table table-dark table-striped">
