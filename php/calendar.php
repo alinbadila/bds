@@ -4,7 +4,7 @@
 
 <?php
   try {
-      global $conn = new PDO('mysql:host=aluna.go.ro;dbname=BDS;charset=utf8', $_SESSION['dbusername'], $_SESSION['dbpassword']);
+      $conn = new PDO('mysql:host=aluna.go.ro;dbname=BDS;charset=utf8', $_SESSION['dbusername'], $_SESSION['dbpassword']);
   } catch (Exception $e) {
       die('Eroare : '.$e->getMessage());
   }
