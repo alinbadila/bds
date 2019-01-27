@@ -4,11 +4,6 @@
 
 <?php
   include 'apicalendar.php';
-  try {
-      $conn = new PDO('mysql:host=aluna.go.ro;dbname=BDS;charset=utf8', $_SESSION['dbusername'], $_SESSION['dbpassword']);
-  } catch (Exception $e) {
-      die('Eroare : '.$e->getMessage());
-  }
 ?>
 
 <!DOCTYPE html>
@@ -66,49 +61,54 @@
             <h3>Sarcinile zilei</h3>
         </div>
       </div>
+      <!-- Tabel concedii de odihna-->
       <div class="row">
           <div class="col-lg-12 text-left">
               <h3>Concedii de odihna</h3>
           </div>
       </div>
-      <!-- Tabel concedii de odihna-->
       <?php
         afiseazaConcedii($conn);
       ?>
+      <!----------------------------->
 
+      <!-- Tabel libere -->
       <div class="row">
           <div class="col-lg-12 text-left">
               <h3>Libere planificate sau recuperari</h3>
           </div>
       </div>
-      <!-- Tabel libere -->
+      <!------------------>
 
+      <!-- Tabel concedii medicale-->
       <div class="row">
           <div class="col-lg-12 text-left">
               <h3>Concedii medicale</h3>
           </div>
       </div>
-      <!-- Tabel concedii medicale-->
       <?php
         afiseazaConcediiMedicale($conn);
       ?>
+      <!---------------------------->
 
+      <!-- Tabel cursuri-->
       <div class="row">
           <div class="col-lg-12 text-left">
               <h3>Cursuri</h3>
           </div>
       </div>
-      <!-- Tabel cursuri-->
       <?php
       afiseazaCursuri($conn);
       ?>
+      <!------------------>
 
+      <!-- Tabel misiuni-->
       <div class="row">
           <div class="col-lg-12 text-left">
               <h3>Misiuni</h3>
           </div>
       </div>
-      <!-- Tabel misiuni-->
+      <!------------------>
   </div>
 
   <script src="../js/jquery.min.js"></script>
@@ -119,10 +119,6 @@
       $( "#datepicker" ).datepicker();
       } );
   </script>
-
-<?php
-  $conn = null;
-?>
 
 <?php else:
       header("Location: loginpage.php");

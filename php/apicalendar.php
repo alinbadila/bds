@@ -1,7 +1,12 @@
-<!-- Procedura afiseaza in tabel persoanele aflate in concediu la data primita ca parametru-->
+
 <?php
+  try {
+      $conn = new PDO('mysql:host=aluna.go.ro;dbname=BDS;charset=utf8', $_SESSION['dbusername'], $_SESSION['dbpassword']);
+  } catch (Exception $e) {
+      die('Eroare : '.$e->getMessage());
+  }
 
-
+/* Procedura afiseaza in tabel persoanele aflate in concediu la data primita ca parametru. */
   function afiseazaConcedii($conn) {
     $sql = "SELECT  BDS.grade.GRAD, BDS.date_pers.NUME, BDS.date_pers.PRENUME,
                     BDS.concedii.DATA_INCEPUT, BDS.concedii.DATA_SFARSIT, BDS.concedii.TIP,
@@ -102,10 +107,8 @@ function afiseazaConcediiMedicale($conn) {
       }
   $query -> closeCursor();
   }
-?>
 
-<!-- Procedura afiseaza in tabel persoanele aflate la cursuri in data primita ca parametru-->
-<?php
+  /* Procedura afiseaza in tabel persoanele aflate la cursuri in data primita ca parametru */
   function afiseazaCursuri($conn) {
     $sql = "SELECT  BDS.grade.GRAD, BDS.date_pers.NUME, BDS.date_pers.PRENUME,
                     BDS.cursuri.TIP_CURS, BDS.cursuri.DESCRIERE, BDS.cursuri.LOCATIE,
@@ -158,4 +161,5 @@ function afiseazaConcediiMedicale($conn) {
         }
     $query -> closeCursor();
   }
+  $conn = null;
 ?>
