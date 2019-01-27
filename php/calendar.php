@@ -1,6 +1,8 @@
 <?php
   session_start();
-  if ($_SESSION['id']): ?>
+  if ($_SESSION['id']) {
+    include 'apicalendar.php';
+  }: ?>
 <!DOCTYPE html>
 
 <html lang="ro">
@@ -64,7 +66,6 @@
       </div>
       <!-- Tabel concedii de odihna-->
       <?php
-        include 'apicalendar.php';
         try {
             $conn = new PDO('mysql:host=aluna.go.ro;dbname=BDS;charset=utf8', $_SESSION['dbusername'], $_SESSION['dbpassword']);
         } catch (Exception $e) {
@@ -88,7 +89,6 @@
       </div>
       <!-- Tabel concedii medicale-->
       <?php
-        include 'apicalendar.php';
         try {
             $conn = new PDO('mysql:host=aluna.go.ro;dbname=BDS;charset=utf8', $_SESSION['dbusername'], $_SESSION['dbpassword']);
         } catch (Exception $e) {
