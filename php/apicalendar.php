@@ -16,7 +16,7 @@
     $query -> execute();
     $rezultat = $query -> fetchAll();
     if (!$rezultat) {
-        echo "<p class=\"text-primary\">Nicio persoana nu se afla in concediu de odihna sau suplimentar in data mentionata.</p>";
+        echo "<p class=\"text-warning\">Nicio persoana nu se afla in concediu de odihna sau suplimentar in data mentionata.</p>";
     } else {
         echo  "<table class=\"table table-dark table-striped\">";
           echo "<thead class=\"thead-light\">";
