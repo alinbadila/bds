@@ -62,6 +62,11 @@
               <h3>Concedii de odihna</h3>
           </div>
       </div>
+
+      <?php include 'apicalendar.php'
+        afiseazaConcedii();
+      ?>
+      
       <!-- Tabel concedii de odihna-->
       <div class="row">
         <table class="table table-dark table-striped">
@@ -119,6 +124,13 @@
           </tbody>
         </table>
       </div>
+
+      <div class="row">
+          <div class="col-lg-12 text-left">
+              <h3>Libere planificate sau recuperari</h3>
+          </div>
+      </div>
+      <!-- Tabel libere -->
 
       <div class="row">
           <div class="col-lg-12 text-left">
