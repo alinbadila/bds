@@ -65,7 +65,13 @@
       <!-- Tabel concedii de odihna-->
       <?php
         include 'apicalendar.php';
-        afiseazaConcedii();
+        try {
+            $conn = new PDO('mysql:host=aluna.go.ro;dbname=BDS;charset=utf8', $_SESSION['dbusername'], $_SESSION['dbpassword']);
+        } catch (Exception $e) {
+            die('Eroare : '.$e->getMessage());
+        }
+        afiseazaConcedii($conn);
+        $conn = null;
       ?>
 
       <div class="row">
