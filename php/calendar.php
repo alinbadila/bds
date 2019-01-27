@@ -115,6 +115,9 @@
               <h3>Misiuni</h3>
           </div>
       </div>
+      <?php
+      afiseazaMisiuni($conn);
+      ?>
       <!------------------>
   </div>
 

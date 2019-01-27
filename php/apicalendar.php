@@ -206,4 +206,55 @@ function afiseazaConcediiMedicale($conn) {
         }
     $query -> closeCursor();
   }
+
+  /* Procedura afiseaza in tabel persoanele aflate in misiune in data mentionata.*/
+  function afiseazaMisiuni($conn) {
+    $sql = "SELECT  BDS.grade.GRAD, BDS.date_pers.NUME, BDS.date_pers.PRENUME,
+                    BDS.misiuni.DATA_INCEPUT, BDS.misiuni.DATA_SFARSIT, BDS.functii.TURA, BDS.misiuni.DESCRIERE
+            FROM BDS.grade
+                    INNER JOIN BDS.misiuni ON BDS.grade.ID_CADRU = BDS.misiuni.ID_CADRU
+                    INNER JOIN BDS.date_pers ON BDS.grade.ID_CADRU = BDS.date_pers.ID_CADRU
+                    INNER JOIN BDS.functii ON BDS.grade.ID_CADRU = BDS.functii.ID_CADRU
+            WHERE (BDS.functii.ID_CADRU IS NOT NULL) and
+                  (CURDATE() >= BDS.misiuni.DATA_INCEPUT and CURDATE() <= BDS.misiuni.DATA_SFARSIT)
+            ORDER BY BDS.functii.TURA;";
+    $query = $conn->prepare($sql);
+    $query -> execute();
+    $rezultat = $query -> fetchAll();
+    if (!$rezultat) {
+        echo "";
+        echo "<p class=\"text-warning\">Nicio persoana nu se afla in misiune la data mentionata.</p>";
+    } else {
+        echo  "<table class=\"table table-dark table-striped\">";
+          echo "<thead class=\"thead-light\">";
+            echo "<tr>";
+              echo "<th>Nr.crt.</th>";
+              echo "<th>Grad</th>";
+              echo "<th>Nume și prenume</th>";
+              echo "<th>Data inceput</th>";
+              echo "<th>Data sfarsit</th>";
+              echo "<th>Descriere misiune</th>";
+              echo "<th>Tura</th>";
+            echo "</tr>";
+          echo "</thead>";
+          echo "<tbody>";
+              $nrcrt = 0;
+              foreach ($rezultat as $rand) {
+                  $nrcrt++;
+                  echo "<tr>";
+                  echo "<td>" . $nrcrt . "</td>";
+                  echo "<td>" . $rand["GRAD"] . "</td>";
+                  echo "<td>" . $rand["NUME"] . " " . $rand["PRENUME"] . "</td>";
+                  echo "<td>" . $rand["DATA_INCEPUT"] . "</td>";
+                  echo "<td>" . $rand["DATA_SFARSIT"] . "</td>";
+                  echo "<td>" . $rand["DESCRIERE"] . "</td>";
+                  echo "<td>" . $rand["TURA"] . "</td>";
+                  echo "</tr>";
+                }
+          echo "</tbody>";
+        echo "</table>";
+        }
+    $query -> closeCursor();
+  }
+
 ?>
