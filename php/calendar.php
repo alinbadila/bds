@@ -55,7 +55,7 @@
       </div>
       <div class="row">
         <div class="col-lg-6 text-center">
-          <h3> Alege altă dată: <input type="text" id="datepicker" maxlength="10" size="10"></h3>
+          <p> Alege altă dată: <input type="text" id="datepicker" maxlength="10" size="10"><p>
         </div>
         <div class="col-lg-6">
           <input type="image" src="../icons/ok.png"/>
