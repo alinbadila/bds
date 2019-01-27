@@ -1,9 +1,8 @@
 <?php
   session_start();
-  if ($_SESSION['id']) {
-    include 'apicalendar.php';
-  }: ?>
+  if ($_SESSION['id']): ?>
 <!DOCTYPE html>
+<?php include 'apicalendar.php'; ?>
 
 <html lang="ro">
 <head>
