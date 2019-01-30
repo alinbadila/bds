@@ -55,7 +55,7 @@
       </div>
       <div class="row">
         <div class="col-lg-12 text-center">
-          <p> Alege altă dată: <input type="text" id="datepicker" maxlength="10" size="12">
+          <p> Alege altă dată: <input type="text" id="datepicker" maxlength="10" size="12" readonly>
               <input class="btn btn-primary btn-sm" id="butonOkData" type="submit" value="ok">
           <p>
         </div>
@@ -86,7 +86,7 @@
         afiseazaSarbatoriti($conn);
       ?>
       <!-------------------------->
-      
+
       <!-- Tabel libere -->
       <div class="row">
           <div class="col-lg-12 text-left">
