@@ -85,8 +85,8 @@
       <?php
         afiseazaSarbatoriti($conn);
       ?>
-
       <!-------------------------->
+      
       <!-- Tabel libere -->
       <div class="row">
           <div class="col-lg-12 text-left">

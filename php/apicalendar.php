@@ -118,7 +118,6 @@ function afiseazaConcediiMedicale($conn) {
     $query -> execute();
     $rezultat = $query -> fetchAll();
     if (!$rezultat) {
-        echo "";
         echo "<p class=\"text-warning\">Nicio persoana nu se afla la curs in data mentionata.</p>";
     } else {
         echo  "<table class=\"table table-dark table-striped\">";
@@ -172,7 +171,6 @@ function afiseazaConcediiMedicale($conn) {
     $query -> execute();
     $rezultat = $query -> fetchAll();
     if (!$rezultat) {
-        echo "";
         echo "<p class=\"text-warning\">Nicio persoana nu este in liber la data mentionata.</p>";
     } else {
         echo  "<table class=\"table table-dark table-striped\">";
@@ -222,7 +220,6 @@ function afiseazaConcediiMedicale($conn) {
     $query -> execute();
     $rezultat = $query -> fetchAll();
     if (!$rezultat) {
-        echo "";
         echo "<p class=\"text-warning\">Nicio persoana nu se afla in misiune la data mentionata.</p>";
     } else {
         echo  "<table class=\"table table-dark table-striped\">";
@@ -265,13 +262,12 @@ function afiseazaConcediiMedicale($conn) {
                     INNER JOIN BDS.date_pers ON BDS.grade.ID_CADRU = BDS.date_pers.ID_CADRU
                     INNER JOIN BDS.functii ON BDS.grade.ID_CADRU = BDS.functii.ID_CADRU
             WHERE (BDS.functii.ID_CADRU IS NOT NULL) and
-                  (CURDATE() = BDS.date_pers.DATA_NASTERII)
+                  (BDS.date_pers.DATA_NASTERII = CURDATE())
             ORDER BY BDS.functii.TURA;";
     $query = $conn->prepare($sql);
     $query -> execute();
     $rezultat = $query -> fetchAll();
     if (!$rezultat) {
-        echo "";
         echo "<p class=\"text-warning\">Nicio persoana nu are ziua de nastere in ziua mentionata.</p>";
     } else {
         echo  "<table class=\"table table-dark table-striped\">";
