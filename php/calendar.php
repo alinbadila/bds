@@ -139,7 +139,7 @@
   <script src="../js/jquery-ui.min.js"></script>
   <script src="../js/bootstrap.min.js"></script>
   <script>
-    var $startDate = $('#datepicker');
+    var $startDate = $("#datepicker");
 
     $startDate.datetimepicker({
       inline:true,
