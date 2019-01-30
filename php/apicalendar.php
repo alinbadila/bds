@@ -292,7 +292,7 @@ function afiseazaConcediiMedicale($conn) {
                   echo "<td>" . $nrcrt . "</td>";
                   echo "<td>" . $rand["GRAD"] . "</td>";
                   echo "<td>" . $rand["NUME"] . " " . $rand["PRENUME"] . "</td>";
-                  echo "<td>" . YEAR(CURDATE()) - YEAR($rand["DATA_NASTERII"]) . "</td>";
+                  echo "<td>" . date('Y') - date('Y', strtotime($rand["DATA_NASTERII"])) . "</td>";
                   echo "<td>" . $rand["TURA"] . "</td>";
                   echo "</tr>";
                 }
