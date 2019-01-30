@@ -140,13 +140,12 @@
   <script src="../js/jquery-ui.min.js"></script>
   <script src="../js/bootstrap.min.js"></script>
   <script>
-    $("#datepicker").datepicker({
-      onSelect: function() {
-          var dateObject = $(this).datepicker('getDate');
-          document.getElementById("rezdatepicker").value=dateObject;
-        }
-    }, format:'Y-m-d');
-
+    var data_aleasa = $("#datepicker").datepicker({
+                      onSelect: function() {
+                          var dateObject = $(this).datepicker('getDate');
+                        },
+                        dateFormat:'yyyy-mm-dd'}).val();
+    document.getElementById("rezdatepicker").value=data_aleasa;
     /*
     $( function() {
       $( "#datepicker" ).datepicker({format: 'Y.m.d'});
