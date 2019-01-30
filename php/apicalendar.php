@@ -3,7 +3,7 @@
 /* Procedura afiseaza in tabel persoanele aflate in concediu la data primita ca parametru. */
   function afiseazaConcedii($conn) {
     $dataAleasa = $_GET['dataAleasa'];
-    echo $dataAleasa;
+
     if ($dataAleasa == "") {
       $sql = "SELECT  BDS.grade.GRAD, BDS.date_pers.NUME, BDS.date_pers.PRENUME,
                       BDS.concedii.DATA_INCEPUT, BDS.concedii.DATA_SFARSIT, BDS.concedii.TIP,
@@ -17,6 +17,7 @@
               ORDER BY BDS.functii.TURA;";
     } else {
         $dataAleasa = date('Y-m-d',strotime($dataAleasa));
+        echo $dataAleasa;
         $sql = "SELECT  BDS.grade.GRAD, BDS.date_pers.NUME, BDS.date_pers.PRENUME,
                         BDS.concedii.DATA_INCEPUT, BDS.concedii.DATA_SFARSIT, BDS.concedii.TIP,
                         BDS.functii.TURA
