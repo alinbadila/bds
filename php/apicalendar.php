@@ -2,16 +2,31 @@
 <?php
 /* Procedura afiseaza in tabel persoanele aflate in concediu la data primita ca parametru. */
   function afiseazaConcedii($conn) {
-    $sql = "SELECT  BDS.grade.GRAD, BDS.date_pers.NUME, BDS.date_pers.PRENUME,
-                    BDS.concedii.DATA_INCEPUT, BDS.concedii.DATA_SFARSIT, BDS.concedii.TIP,
-                    BDS.functii.TURA
-            FROM BDS.grade
-                    INNER JOIN BDS.concedii ON BDS.grade.ID_CADRU = BDS.concedii.ID_CADRU
-                    INNER JOIN BDS.date_pers ON BDS.grade.ID_CADRU = BDS.date_pers.ID_CADRU
-                    INNER JOIN BDS.functii ON BDS.grade.ID_CADRU = BDS.functii.ID_CADRU
-            WHERE (BDS.concedii.VALID = 1) and (BDS.functii.ID_CADRU IS NOT NULL) and
-                  (CURDATE() >= BDS.concedii.DATA_INCEPUT and CURDATE() <= BDS.concedii.DATA_SFARSIT)
-            ORDER BY BDS.functii.TURA;";
+    $dataAleasa = $_GET['dataAleasa'];
+    if ($dataAleasa == "") {
+      $sql = "SELECT  BDS.grade.GRAD, BDS.date_pers.NUME, BDS.date_pers.PRENUME,
+                      BDS.concedii.DATA_INCEPUT, BDS.concedii.DATA_SFARSIT, BDS.concedii.TIP,
+                      BDS.functii.TURA
+              FROM BDS.grade
+                      INNER JOIN BDS.concedii ON BDS.grade.ID_CADRU = BDS.concedii.ID_CADRU
+                      INNER JOIN BDS.date_pers ON BDS.grade.ID_CADRU = BDS.date_pers.ID_CADRU
+                      INNER JOIN BDS.functii ON BDS.grade.ID_CADRU = BDS.functii.ID_CADRU
+              WHERE (BDS.concedii.VALID = 1) and (BDS.functii.ID_CADRU IS NOT NULL) and
+                    (CURDATE() >= BDS.concedii.DATA_INCEPUT and CURDATE() <= BDS.concedii.DATA_SFARSIT)
+              ORDER BY BDS.functii.TURA;";
+    } else {
+        $dataAleasa = date('Y-m-d',strotime($dataAleasa));
+        $sql = "SELECT  BDS.grade.GRAD, BDS.date_pers.NUME, BDS.date_pers.PRENUME,
+                        BDS.concedii.DATA_INCEPUT, BDS.concedii.DATA_SFARSIT, BDS.concedii.TIP,
+                        BDS.functii.TURA
+                FROM BDS.grade
+                        INNER JOIN BDS.concedii ON BDS.grade.ID_CADRU = BDS.concedii.ID_CADRU
+                        INNER JOIN BDS.date_pers ON BDS.grade.ID_CADRU = BDS.date_pers.ID_CADRU
+                        INNER JOIN BDS.functii ON BDS.grade.ID_CADRU = BDS.functii.ID_CADRU
+                WHERE (BDS.concedii.VALID = 1) and (BDS.functii.ID_CADRU IS NOT NULL) and
+                      ('$dataAleasa' >= BDS.concedii.DATA_INCEPUT and '$dataAleasa' <= BDS.concedii.DATA_SFARSIT)
+                ORDER BY BDS.functii.TURA;";
+            }
     $query = $conn->prepare($sql);
     $query -> execute();
     $rezultat = $query -> fetchAll();
