@@ -144,7 +144,7 @@
             onSelect: function() {
               var dateObject = $(this).datepicker('getDate');
             },
-            dateFormat:'yyyy-mm-dd'});
+            dateFormat:'yy-mm-dd'});
 
   </script>
 
