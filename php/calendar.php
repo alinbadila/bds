@@ -140,8 +140,8 @@
   <script src="../js/bootstrap.min.js"></script>
   <script>
     $( function() {
-      $( "#datepicker" ).datepicker();
-      } );
+      $( "#datepicker" ).datepicker({format: 'Y.m.d'});
+      });
   </script>
 
 <?php else:
