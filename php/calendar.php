@@ -142,8 +142,8 @@
   <script>
     var data_aleasa = $("#datepicker").datepicker({
                       onSelect: function() {
-                          var dateObject = $(this).datepicker('getDate').val();
-                          document.getElementById('rezdatepicker').value = dateObject;
+                          var dateObject = $(this).datepicker('getDate');
+                          document.getElementById('rezdatepicker').value = dateObject.val();
                         },
                         dateFormat:'yyyy-mm-dd'});
 
