@@ -76,6 +76,17 @@
       ?>
       <!----------------------------->
 
+      <!-- Tabel zile de nastere-->
+      <div class="row">
+          <div class="col-lg-12 text-left">
+              <h3>Zile de nastere</h3>
+          </div>
+      </div>
+      <?php
+        afiseazaSarbatoriti($conn);
+      ?>
+
+      <!-------------------------->
       <!-- Tabel libere -->
       <div class="row">
           <div class="col-lg-12 text-left">

@@ -257,4 +257,48 @@ function afiseazaConcediiMedicale($conn) {
     $query -> closeCursor();
   }
 
+
+  /* Procedura afiseaza in tabel persoanele aflate nascute in data mentionata.*/
+  function afiseazaSarbatoriti($conn) {
+    $sql = "SELECT  BDS.grade.GRAD, BDS.date_pers.NUME, BDS.date_pers.PRENUME, BDS.functii.TURA
+            FROM BDS.grade
+                    INNER JOIN BDS.date_pers ON BDS.grade.ID_CADRU = BDS.date_pers.ID_CADRU
+                    INNER JOIN BDS.functii ON BDS.grade.ID_CADRU = BDS.functii.ID_CADRU
+            WHERE (BDS.functii.ID_CADRU IS NOT NULL) and
+                  (CURDATE() = BDS.date_pers.DATA_NASTERII)
+            ORDER BY BDS.functii.TURA;";
+    $query = $conn->prepare($sql);
+    $query -> execute();
+    $rezultat = $query -> fetchAll();
+    if (!$rezultat) {
+        echo "";
+        echo "<p class=\"text-warning\">Nicio persoana nu are ziua de nastere in ziua mentionata.</p>";
+    } else {
+        echo  "<table class=\"table table-dark table-striped\">";
+          echo "<thead class=\"thead-light\">";
+            echo "<tr>";
+              echo "<th>Nr.crt.</th>";
+              echo "<th>Grad</th>";
+              echo "<th>Nume și prenume</th>";
+              echo "<th>Varsta</th>";
+              echo "<th>Tura</th>";
+            echo "</tr>";
+          echo "</thead>";
+          echo "<tbody>";
+              $nrcrt = 0;
+              foreach ($rezultat as $rand) {
+                  $nrcrt++;
+                  echo "<tr>";
+                  echo "<td>" . $nrcrt . "</td>";
+                  echo "<td>" . $rand["GRAD"] . "</td>";
+                  echo "<td>" . $rand["NUME"] . " " . $rand["PRENUME"] . "</td>";
+                  echo "<td>" . YEAR(CURDATE()) - YEAR($rand["DATA_NASTERII"]) . "</td>";
+                  echo "<td>" . $rand["TURA"] . "</td>";
+                  echo "</tr>";
+                }
+          echo "</tbody>";
+        echo "</table>";
+        }
+    $query -> closeCursor();
+  }
 ?>
