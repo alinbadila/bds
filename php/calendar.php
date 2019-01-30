@@ -57,6 +57,7 @@
         <div class="col-lg-12 text-center">
           <p> Alege altă dată: <input type="text" id="datepicker" maxlength="20" size="25" readonly>
               <input class="btn btn-primary btn-sm" id="butonOkData" type="submit" value="ok" onclick="arataData()">
+              <input class="btn btn-primary btn-sm" id="butonOkData" type="submit" value="ok2" onclick="location.href='calendar.php'">
               Data selectata: <input type="text" id="rezdatepicker" maxlength="10" size="12" readonly>
           <p>
         </div>
