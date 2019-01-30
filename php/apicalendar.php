@@ -1,5 +1,14 @@
 
 <?php
+/* Returneaza data curenta sau data selectata*/
+  function dataSelectata() {
+    if (!$_GET['dataAleasa']) {
+      return date("d/m/Y");
+    } else {
+      return $_GET['$dataAleasa'];
+    }  
+  }
+
 /* Procedura afiseaza in tabel persoanele aflate in concediu la data primita ca parametru. */
   function afiseazaConcedii($conn) {
     $dataAleasa = $_GET['dataAleasa'];
