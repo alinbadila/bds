@@ -145,7 +145,7 @@
                           var dateObject = $(this).datepicker('getDate').val();
                           document.getElementById('rezdatepicker').value = dateObject;
                         },
-                        dateFormat:'yyyy-mm-dd'}).val();
+                        dateFormat:'yyyy-mm-dd'});
 
   </script>
 
