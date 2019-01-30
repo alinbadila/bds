@@ -257,7 +257,8 @@ function afiseazaConcediiMedicale($conn) {
 
   /* Procedura afiseaza in tabel persoanele aflate nascute in data mentionata.*/
   function afiseazaSarbatoriti($conn) {
-    $sql = "SELECT  BDS.grade.GRAD, BDS.date_pers.NUME, BDS.date_pers.PRENUME, BDS.functii.TURA
+    $sql = "SELECT  BDS.grade.GRAD, BDS.date_pers.NUME, BDS.date_pers.PRENUME, BDS.date_pers.DATA_NASTERII,
+                    BDS.functii.TURA
             FROM BDS.grade
                     INNER JOIN BDS.date_pers ON BDS.grade.ID_CADRU = BDS.date_pers.ID_CADRU
                     INNER JOIN BDS.functii ON BDS.grade.ID_CADRU = BDS.functii.ID_CADRU
@@ -288,7 +289,7 @@ function afiseazaConcediiMedicale($conn) {
                   echo "<td>" . $nrcrt . "</td>";
                   echo "<td>" . $rand["GRAD"] . "</td>";
                   echo "<td>" . $rand["NUME"] . " " . $rand["PRENUME"] . "</td>";
-                  echo "<td>" . intval(date('Y') - date('Y', strtotime($rand["DATA_NASTERII"]))) . $rand["DATA_NASTERII"] . "</td>";
+                  echo "<td>" . intval(date('Y') - date('Y', strtotime($rand["DATA_NASTERII"]))) . " " . $rand["DATA_NASTERII"] . "</td>";
                   echo "<td>" . $rand["TURA"] . "</td>";
                   echo "</tr>";
                 }
