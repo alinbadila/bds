@@ -146,10 +146,6 @@
                         },
                         dateFormat:'yyyy-mm-dd'}).val();
     document.getElementById("rezdatepicker").value=data_aleasa;
-    /*
-    $( function() {
-      $( "#datepicker" ).datepicker({format: 'Y.m.d'});
-    });*/
   </script>
 
 <?php else:
