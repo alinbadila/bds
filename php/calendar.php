@@ -140,11 +140,11 @@
   <script src="../js/jquery-ui.min.js"></script>
   <script src="../js/bootstrap.min.js"></script>
   <script>
-    var data_aleasa = $("#datepicker").datepicker({
-                      onSelect: function() {
-                          var dateObject = $(this).datepicker('getDate');
-                        },
-                        dateFormat:'yyyy-mm-dd'});
+    $("#datepicker").datepicker({
+            onSelect: function() {
+              var dateObject = $(this).datepicker('getDate');
+            },
+            dateFormat:'yyyy-mm-dd'});
 
   </script>
 
