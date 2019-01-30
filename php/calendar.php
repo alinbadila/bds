@@ -57,7 +57,7 @@
         <div class="col-lg-12 text-center">
           <p> Alege altă dată: <input type="text" id="datepicker" maxlength="20" size="25" readonly>
               <input class="btn btn-primary btn-sm" id="butonOkData" type="submit" value="ok">
-              Data selectata: <input type="text" id="rezdatepicker" maxlength="10" size="12" readonly>
+              Data selectata: <input type="text" id="rezdatepicker" maxlength="10" size="12">
           <p>
         </div>
       </div>
@@ -145,7 +145,7 @@
                           var dateObject = $(this).datepicker('getDate');
                         },
                         dateFormat:'yyyy-mm-dd'}).val();
-    document.getElementById('rezdatepicker').value=data_aleasa;
+    document.getElementById('rezdatepicker').value = data_aleasa;
   </script>
 
 <?php else:
