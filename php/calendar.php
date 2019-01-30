@@ -145,7 +145,7 @@
                           var dateObject = $(this).datepicker('getDate');
                         },
                         dateFormat:'yyyy-mm-dd'}).val();
-    document.getElementById("rezdatepicker").value=data_aleasa;
+    document.getElementById('rezdatepicker').value=data_aleasa;
   </script>
 
 <?php else:
