@@ -143,9 +143,10 @@
     $("#datepicker").datepicker({
       onSelect: function() {
           var dateObject = $(this).datepicker('getDate');
+          document.getElementById("rezdatepicker").value=dateObject;
         }
     });
-    document.getElementById("rezdatepicker").value=dateObject;
+
     /*
     $( function() {
       $( "#datepicker" ).datepicker({format: 'Y.m.d'});
