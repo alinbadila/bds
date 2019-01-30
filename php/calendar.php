@@ -145,7 +145,7 @@
           var dateObject = $(this).datepicker('getDate');
           document.getElementById("rezdatepicker").value=dateObject;
         }
-    }, format:"Y.m.d");
+    }, format:'Y-m-d');
 
     /*
     $( function() {
