@@ -9,7 +9,7 @@ $sql = "SELECT * FROM utilizatori
         WHERE uid = '$uid' AND parola = '$parola'";
 
 $query = $conn->prepare($sql);
-	
+
 if ($query == false) {
 	 print_r($conn->errorInfo());
 	 die ('Eroare la pregatire query');
