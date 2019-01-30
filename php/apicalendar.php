@@ -5,7 +5,7 @@
     if ($_GET['dataAleasa'] == "") {
       return date("d/m/Y");
     } else {
-      return $_GET['dataAleasa'];
+      return date("d/m/Y", strtotime($_GET['dataAleasa']));
     }
   }
 
