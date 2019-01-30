@@ -55,7 +55,7 @@
       </div>
       <div class="row">
         <div class="col-lg-12 text-center">
-          <p> Alege altă dată: <input type="text" id="datepicker" maxlength="20" size="25" readonly>
+          <p> Alege altă dată: <input type="text" id="datepicker" maxlength="15" size="15" readonly>
               <input class="btn btn-primary btn-sm" id="butonOkData" type="submit" value="ok" onclick="location.href='calendar.php' + '?dataAleasa=' + document.getElementById('datepicker').value;">
           <p>
         </div>
