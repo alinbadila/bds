@@ -139,9 +139,22 @@
   <script src="../js/jquery-ui.min.js"></script>
   <script src="../js/bootstrap.min.js"></script>
   <script>
+    var $startDate = $('#datepicker');
+
+    $startDate.datetimepicker({
+      inline:true,
+      sideBySide: true
+    });
+
+    $startDate.on('dp.change', function() {
+      var selectedDate = $(this).val();
+      alert(selectedDate);
+    });
+
+    /*
     $( function() {
       $( "#datepicker" ).datepicker({format: 'Y.m.d'});
-      });
+    });*/
   </script>
 
 <?php else:
