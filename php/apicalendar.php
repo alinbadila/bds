@@ -262,7 +262,7 @@ function afiseazaConcediiMedicale($conn) {
                     INNER JOIN BDS.date_pers ON BDS.grade.ID_CADRU = BDS.date_pers.ID_CADRU
                     INNER JOIN BDS.functii ON BDS.grade.ID_CADRU = BDS.functii.ID_CADRU
             WHERE (BDS.functii.ID_CADRU IS NOT NULL) and
-                  (BDS.date_pers.DATA_NASTERII = CURDATE())
+                  (MONTH(BDS.date_pers.DATA_NASTERII) = MONTH(CURDATE()) AND DAY(BDS.date_pers.DATA_NASTERII) = DAY(CURDATE()))
             ORDER BY BDS.functii.TURA;";
     $query = $conn->prepare($sql);
     $query -> execute();
